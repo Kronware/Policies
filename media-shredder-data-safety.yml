@@ -1,0 +1,34 @@
+# media-shredder Data Safety Declaration
+# For Google Play Console Data Safety Section
+
+app_name: Media Shredder
+package_id: com.mediashredder.app
+
+data_collection:
+  collects_data: false
+  developer_collected_data: []
+
+  third_party_data:
+    - provider: Google AdMob
+      data_types:
+        - Device or other IDs (Advertising ID)
+        - App interactions
+        - Diagnostics (crash logs, performance data)
+      purpose:
+        - Advertising or marketing
+        - Analytics
+      optional: false
+      user_can_opt_out: true  # Via device Ads settings
+
+data_shared:
+  shared_with_third_parties: false
+  # AdMob data sharing is handled by Google under their own policies
+
+security_practices:
+  data_encrypted_in_transit: true   # AdMob uses TLS
+  data_deletion_request_available: false  # No user data collected by developer
+  independent_security_review: false
+
+file_operations:
+  all_file_operations: on_device_only
+  no_data_leaves_device_from_app: true
