@@ -30,7 +30,7 @@ This page supports the Google Play Data Safety declaration for the QR Scanner ap
 |---|---|
 | `CAMERA` | Scanning QR codes via the live camera viewfinder |
 | `INTERNET` | Loading advertisements via AdMob; opening scanned URLs in a browser |
-| `READ_MEDIA_IMAGES` (granted by system photo picker — no explicit permission request) | Selecting an image from your gallery to scan |
+| Photo / image access (no explicit permission) | The system content picker grants one-time access to the image you select for "Scan from Image" — the App never holds a blanket media permission |
 
 ---
 

@@ -19,7 +19,7 @@ Stored data includes:
 The App requests access to your device camera solely to scan QR codes in real time. Camera data is processed entirely on-device and is never stored or transmitted.
 
 ### Photo library
-If you use the "Scan from Image" feature, the App requests access to a single image you select. The image is processed on-device to detect a QR code and is never stored or transmitted.
+If you use the "Scan from Image" feature (available from the app drawer), the App opens the system image picker for you to select a photo. The selected image is processed entirely on-device by ML Kit to detect a QR code and is never stored or transmitted. No explicit `READ_MEDIA_IMAGES` permission is requested by the App — access to the chosen image is granted automatically by the Android system when you make a selection.
 
 ### Advertising
 The App uses **Google AdMob** to display advertisements. AdMob may collect device identifiers and usage data in accordance with Google's own privacy policies to serve personalised ads.
