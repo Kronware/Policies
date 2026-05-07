@@ -1,6 +1,6 @@
 # media-shredder Privacy Policy
 
-**Last Updated:** May 6, 2026
+**Last Updated:** May 7, 2026
 
 ## Overview
 
@@ -8,9 +8,11 @@ Media Shredder ("the App") is an Android application designed to help users secu
 
 ## Data Collection
 
-**Media Shredder does not collect, transmit, store, or share any personal data.**
+**Media Shredder does not collect, transmit, store, or share any personal data with the developer.**
 
-All operations performed by the App occur entirely on your device. No information about you, your device, or your media is sent to any server operated by the developer.
+All shredding operations are performed entirely on your device. No information about you, your device, or your media is sent to any server operated by the developer.
+
+If you purchase **Media Shredder Pro**, your purchase is processed exclusively by Google Play. The App receives only a confirmation of purchase status from Google Play Billing. The developer does not receive or store your payment details, name, or billing address.
 
 ## Permissions Used
 
@@ -25,19 +27,30 @@ The App requests the following permissions:
 | `MANAGE_EXTERNAL_STORAGE` | Required to locate, overwrite, and permanently delete media files. This is a restricted permission; its use is limited solely to the core shredding function of the App and is never used to access unrelated user files. |
 | `MANAGE_MEDIA` | Required to request permanent deletion of media directly from the Android MediaStore on Android 11+ without leaving files in the system Trash |
 | `POST_NOTIFICATIONS` | Required on Android 13+ to display progress notifications during background shredding operations |
-| `INTERNET` | Required for AdMob advertising SDK |
+| `INTERNET` | Required for AdMob advertising SDK (free tier) and Google Play Billing (Pro purchase) |
 | `ACCESS_NETWORK_STATE` | Required for AdMob advertising SDK |
 
 ## Advertising
 
-This App uses **Google AdMob** to display banner advertisements. AdMob may collect and use data in accordance with [Google's Privacy Policy](https://policies.google.com/privacy). This may include:
+The free version of this App uses **Google AdMob** to display banner advertisements. AdMob may collect and use data in accordance with [Google's Privacy Policy](https://policies.google.com/privacy). This may include:
 
 - Device identifiers
 - IP address
 - Advertising ID
 - Usage data for ad targeting and measurement
 
-You may opt out of personalized advertising through your device settings under **Google → Ads → Opt out of Ads Personalization**.
+**Users who have purchased Media Shredder Pro are shown no advertisements.** AdMob is not initialised at all for Pro users.
+
+Free-tier users may opt out of personalized advertising through their device settings under **Google → Ads → Opt out of Ads Personalization**.
+
+## Pro Upgrade & Billing
+
+Media Shredder offers an optional one-time in-app purchase called **Media Shredder Pro**, processed by Google Play Billing.
+
+- Payment is handled entirely by Google Play. The developer has no access to your payment information.
+- After a successful purchase, the App stores only a boolean flag locally on your device (in Android SharedPreferences) indicating that Pro status has been confirmed. This data never leaves your device.
+- Purchase history and receipts are managed by your Google Play account.
+- For refund requests, please follow Google Play's standard refund process.
 
 ## File Operations
 
@@ -46,6 +59,17 @@ When you choose to shred files:
 1. The App overwrites the file contents with cryptographically random data (3 passes).
 2. The App deletes the file from the file system via Android's MediaStore API.
 3. No copy of the file data is retained by the App.
+
+## Local Data Storage
+
+The App stores the following data locally on your device only:
+
+| Data | Storage | Purpose |
+|---|---|---|
+| Auto-shred on/off preference | SharedPreferences | Remember your nightly auto-shred setting |
+| Pro status cache | SharedPreferences | Avoid querying Google Play on every app launch |
+
+This data is never transmitted off-device.
 
 ## Children's Privacy
 
