@@ -1,6 +1,6 @@
 # media-shredder Privacy Policy
 
-**Last Updated:** May 7, 2026
+**Last Updated:** May 8, 2026
 
 ## Overview
 
@@ -22,11 +22,11 @@ The App requests the following permissions:
 |---|---|
 | `READ_MEDIA_IMAGES` | Browse photos on your device |
 | `READ_MEDIA_VIDEO` | Browse videos on your device |
+| `READ_MEDIA_VISUAL_USER_SELECTED` | Supports Android 14+ partial photo/video access |
 | `READ_EXTERNAL_STORAGE` | Browse media on devices running Android 9 and below (not requested on Android 10+) |
 | `WRITE_EXTERNAL_STORAGE` | Write access for devices running Android 9 and below (not requested on Android 10+) |
-| `MANAGE_EXTERNAL_STORAGE` | Required to locate, overwrite, and permanently delete media files. This is a restricted permission; its use is limited solely to the core shredding function of the App and is never used to access unrelated user files. |
-| `MANAGE_MEDIA` | Required to request permanent deletion of media directly from the Android MediaStore on Android 11+ without leaving files in the system Trash |
-| `POST_NOTIFICATIONS` | Required on Android 13+ to display progress notifications during background shredding operations |
+| `MANAGE_MEDIA` | Requests one-time write access to media files via Android MediaStore on Android 12+, enabling secure overwrite without per-file system dialogs |
+| `POST_NOTIFICATIONS` | Required on Android 13+ to display progress notifications during shredding operations |
 | `INTERNET` | Required for AdMob advertising SDK (free tier) and Google Play Billing (Pro purchase) |
 | `ACCESS_NETWORK_STATE` | Required for AdMob advertising SDK |
 
@@ -66,7 +66,6 @@ The App stores the following data locally on your device only:
 
 | Data | Storage | Purpose |
 |---|---|---|
-| Auto-shred on/off preference | SharedPreferences | Remember your nightly auto-shred setting |
 | Pro status cache | SharedPreferences | Avoid querying Google Play on every app launch |
 
 This data is never transmitted off-device.

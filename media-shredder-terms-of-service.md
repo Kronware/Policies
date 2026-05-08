@@ -1,6 +1,6 @@
 # media-shredder Terms of Service
 
-**Last Updated:** May 7, 2026
+**Last Updated:** May 8, 2026
 **App Name:** Media Shredder
 **Package:** com.mediashredder.app
 
@@ -14,8 +14,8 @@ Media Shredder is a tool that allows users to permanently and securely delete me
 
 The App is available in two tiers:
 
-- **Free** — full shredding capability with banner advertisements.
-- **Pro** (one-time in-app purchase) — removes all advertisements and unlocks the Nightly Auto-Shred background service.
+- **Free** — full shredding capability for media in the device library, with banner advertisements.
+- **Pro** (one-time in-app purchase) — removes all advertisements and unlocks access to the **Recently Deleted** (recycle bin) shredding feature, which allows secure 3-pass overwriting of photos and videos pending deletion.
 
 ## 3. No Warranty — Data Loss Is Intentional
 

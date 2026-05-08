@@ -19,6 +19,19 @@ data_collection:
         - Analytics
       optional: false
       user_can_opt_out: true  # Via device Ads settings
+      notes: Only collected for free-tier users. Not collected for Pro users.
+
+    - provider: Google Play Billing
+      data_types:
+        - Purchase history (managed by Google Play, not the developer)
+      purpose:
+        - In-app purchases (Pro upgrade)
+      optional: true  # Only when user initiates a purchase
+      user_can_opt_out: false  # Required to complete a purchase
+      notes: >
+        Payment is processed entirely by Google Play. The app receives only a
+        boolean purchase confirmation. No payment details, name, or billing
+        address are received or stored by the developer.
 
 data_shared:
   shared_with_third_parties: false
