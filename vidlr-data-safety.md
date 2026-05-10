@@ -8,10 +8,11 @@ This page supports the Google Play Data Safety declaration for the Vidlr app.
 
 | Data type | Collected | Shared with third parties | Purpose |
 |---|---|---|---|
-| App settings (download path, resolution preference, home URL) | Stored on-device only | No | App functionality |
-| Last visited URL (optional, only if "Open last page" is enabled) | Stored on-device only | No | Session restore |
+| App settings (download path, resolution preference, home URL, tab persistence) | Stored on-device only | No | App functionality |
+| Browser cookies and cache | Stored on-device only | No | Web browsing session; clearable by user |
+| Clipboard URL (read once, immediately cleared) | Read transiently, not stored | No | Offer to open copied URLs in browser |
 | Downloaded video files | Saved to device storage chosen by you | No | App functionality |
-| Device identifiers (via AdMob) | Yes — by Google AdMob SDK | Yes — to Google for ads | Advertising |
+| Device identifiers (via AdMob, free version only) | Yes — by Google AdMob SDK | Yes — to Google for ads | Advertising |
 
 ---
 
@@ -19,8 +20,10 @@ This page supports the Google Play Data Safety declaration for the Vidlr app.
 
 - **No personal data** (name, email, location, contacts) is ever collected by this app
 - **Settings and session data are local only** — stored on-device, never uploaded to any server
+- **Browser data** (cookies, cache, web storage) is stored locally and can be fully cleared from Settings at any time
+- **Clipboard** is read only when the app gains focus and a URL is present; the content is cleared immediately and never stored or transmitted
 - **Downloaded files** are saved directly to the folder you choose on your device and are not uploaded or shared by the app
-- **Advertising** is handled by Google AdMob. The AdMob SDK may collect device advertising IDs for ad personalisation. See [Google's Privacy Policy](https://policies.google.com/privacy) for full details.
+- **Advertising** is shown only in the free version and is handled by Google AdMob. The AdMob SDK may collect device advertising IDs for ad personalisation. See [Google's Privacy Policy](https://policies.google.com/privacy) for full details. Pro users see no ads.
 
 ---
 
@@ -43,7 +46,9 @@ This page supports the Google Play Data Safety declaration for the Vidlr app.
 
 - **Download folder**: Can be changed at any time in Settings
 - **Wi-Fi only downloads**: Can be toggled in Settings to prevent downloads over mobile data
-- **Session restore**: The "Open last page" setting can be disabled so no URL is remembered between sessions
+- **Clear browser data**: Cookies, cache, and web storage can be fully cleared from Settings
+- **Desktop mode**: Each browser tab can be switched between mobile and desktop user-agent independently
+- **Tab limit**: Free users can open up to 2 browser tabs; Pro users have no limit
 - **Ad personalisation**: Can be adjusted in your device's Google settings → Ads
 
 ---

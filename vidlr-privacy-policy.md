@@ -9,16 +9,19 @@ This Privacy Policy explains how the Vidlr app ("the App") handles your informat
 ## Information We Collect
 
 ### Settings stored on your device
-The App stores user preferences such as your chosen download folder, default resolution, home page URL, and Wi-Fi-only download preference. This data is saved **locally on your device only** and is never transmitted to any server or third party.
+The App stores user preferences such as your chosen download folder, default resolution, home page URL, Wi-Fi-only download preference, and tab persistence preference. This data is saved **locally on your device only** and is never transmitted to any server or third party.
 
 ### Browser activity
-The App includes a built-in web browser to help you navigate to video content. Your browsing session occurs entirely within the App. The App may remember the last visited URL (if you enable the "Open last page" setting) to restore your session on next launch. This data is stored locally on your device only.
+The App includes a built-in web browser to help you navigate to video content. Your browsing session occurs entirely within the App. Browser cookies and cache are stored locally on your device and can be cleared at any time from the Settings screen.
+
+### Clipboard access
+When the App comes into focus, it checks whether the clipboard contains a URL. If a URL is detected, you are offered the option to open it in the browser. The clipboard content is read once and immediately cleared to prevent repeated prompts. No clipboard data is stored or transmitted.
 
 ### Downloaded files
 Videos you choose to download are saved to the folder you select on your device. The App does not upload, share, or transmit any downloaded content.
 
 ### Advertising
-The App uses **Google AdMob** to display advertisements. AdMob may collect device identifiers and usage data in accordance with Google's own privacy policies to serve personalised ads.
+The free version of the App uses **Google AdMob** to display advertisements. AdMob may collect device identifiers and usage data in accordance with Google's own privacy policies to serve personalised ads. Pro users do not see ads.
 
 For more information, see:
 - [Google Privacy Policy](https://policies.google.com/privacy)
@@ -40,7 +43,7 @@ To opt out of personalised advertising, you can adjust your device's ad personal
 
 ## Data Retention
 
-All settings and session data are stored locally on your device. You can reset settings within the App at any time. Downloaded video files remain in the folder you chose until you delete them manually. Uninstalling the App removes all locally stored App data, but files you have already downloaded to external storage will remain.
+All settings and session data are stored locally on your device. You can reset settings or clear all browser data (cookies, cache, and web storage) within the App at any time. Downloaded video files remain in the folder you chose until you delete them manually. Uninstalling the App removes all locally stored App data, but files you have already downloaded to external storage will remain.
 
 ---
 
