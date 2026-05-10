@@ -69,4 +69,4 @@ We reserve the right to modify these Terms at any time. Continued use of the App
 
 ## 11. Contact
 
-For questions about these Terms, contact: **mediashredder@proton.me**
+For questions about these Terms, contact: **joshdparks@gmail.com**

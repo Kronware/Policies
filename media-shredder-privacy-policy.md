@@ -80,4 +80,4 @@ We may update this Privacy Policy. Continued use of the App after any changes co
 
 ## Contact
 
-For questions about this Privacy Policy, contact: **mediashredder@proton.me**
+For questions about this Privacy Policy, contact: **joshdparks@gmail.com**

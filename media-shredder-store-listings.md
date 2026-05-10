@@ -71,6 +71,6 @@ Anyone who values privacy and wants confidence that deleted media cannot be easi
 
 ## Contact / Support
 
-- **Support email:** mediashredder@proton.me
+- **Support email:** joshdparks@gmail.com
 - **Privacy Policy URL:** https://raw.githubusercontent.com/Kronware/Policies/main/media-shredder-privacy-policy.md
 - **Terms of Service URL:** https://raw.githubusercontent.com/Kronware/Policies/main/media-shredder-terms-of-service.md
