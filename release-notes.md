@@ -2,6 +2,12 @@
 
 ---
 
+## Version 1.0.34
+
+Bug fixes and stability improvements.
+
+---
+
 ## Version 1.0.33
 
 Bug fixes and compatibility improvements for Android 16.
