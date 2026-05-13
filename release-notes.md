@@ -2,6 +2,13 @@
 
 ---
 
+## Version 1.0.36
+
+- Added Go Pro screen with a list of Pro benefits and an upgrade button
+- Go Pro option now appears in the navigation menu (hidden once you've upgraded)
+
+---
+
 ## Version 1.0.34
 
 Bug fixes and stability improvements.
