@@ -2,6 +2,12 @@
 
 ---
 
+## Version 1.0.37
+
+Bug fixes and stability improvements.
+
+---
+
 ## Version 1.0.36
 
 - Added Go Pro screen with a list of Pro benefits and an upgrade button
