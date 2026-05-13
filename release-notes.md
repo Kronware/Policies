@@ -4,7 +4,7 @@
 
 ## Version 1.0.45
 
-Bug fixes and stability improvements.
+Updated Google Play Billing Library for continued compatibility with Google Play requirements.
 
 ---
 
