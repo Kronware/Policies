@@ -2,6 +2,12 @@
 
 ---
 
+## Version 1.0.43
+
+Bug fixes and stability improvements.
+
+---
+
 ## Version 1.0.40
 
 Bug fixes and compatibility improvements for Android 15.
