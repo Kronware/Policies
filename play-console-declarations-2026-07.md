@@ -8,12 +8,12 @@ This file provides copy-ready text for Play Console declarations.
 - dataSync
 
 ### Features that use FGS
-- Tracking analysis for auto-censor processing (user taps Apply in Tracking modal)
+- Tracking analysis for auto-censor processing, including optional Post AI Analysis refinement (user taps Apply in Tracking modal)
 - Preview baking for effect previews (user-triggered preview generation)
 - Final video export/transcode (user taps Export)
 
 ### Description of app functionality using this type
-Viditor is an on-device video editor. When the user starts tracking analysis, preview baking, or export, the app performs long-running local media processing. These jobs are started directly by the user and run as foreground services with persistent notifications so the work remains reliable and user-visible.
+Viditor is an on-device video editor. When the user starts tracking analysis, optional Post AI Analysis refinement, preview baking, or export, the app performs long-running local media processing. These jobs are started directly by the user and run as foreground services with persistent notifications so the work remains reliable and user-visible.
 
 ### User impact if deferred or interrupted
 If deferred, users experience delayed completion of the processing operation they explicitly started (analysis, preview generation, or export), which blocks the expected editing/export flow. If interrupted, the job may fail or require restart, resulting in incomplete outputs and a degraded editing experience.
@@ -40,6 +40,7 @@ Scope here is based on current app behavior and manifest permissions.
 
 ### Why this answer set is consistent
 - Processing is on-device only
+- Optional Post AI Analysis is on-device only and does not upload frames or analysis data
 - No account system
 - No ad SDKs
 - No analytics/crash SDKs that transmit user data
@@ -49,7 +50,7 @@ Scope here is based on current app behavior and manifest permissions.
 
 Use this summary at the top of your hosted privacy policy page:
 
-Viditor processes videos entirely on-device. The app does not upload video, image, audio, or personal data to external servers. No user account is required. Viditor uses foreground-service notifications only to keep user-initiated media processing visible and reliable while running. Users can remove local project data at any time by clearing app storage or uninstalling the app.
+Viditor processes videos entirely on-device. The app does not upload video, image, audio, or personal data to external servers. No user account is required. Viditor's automatic censor workflow may include optional Post AI Analysis refinement, which also runs entirely on-device. Viditor uses foreground-service notifications only to keep user-initiated media processing visible and reliable while running. Users can remove local project data at any time by clearing app storage or uninstalling the app.
 
 ## 4) Final Pre-Submission Checks
 
