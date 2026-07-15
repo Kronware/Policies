@@ -2,6 +2,22 @@
 
 ---
 
+## Version 1.0.2 (Testing / Internal)
+
+Stability and parity update for tracking/export workflows.
+
+- Export reuses saved tracking analysis cache when source/trim/settings match
+- Export skips face-analysis phase when cache is valid (faster repeat exports)
+- Export pre-gap behavior aligned with preview (full forward scan inside pre-gap window)
+- Export post-gap now honors configured gap value from Tracking settings
+- Improved tracking object ON/OFF parity for export
+- Fixed export completion handling when output file was deleted externally
+- Fixed timeline labels with dynamic time formatting (`50s`, `1:05`, `01:02:03`)
+- Improved export dialog/progress text contrast in dark mode
+- CPU tracked export overlay fixed to avoid frame accumulation artifacts
+
+---
+
 ## Version 1.0 (Initial Release)
 
 First public release of Viditor.

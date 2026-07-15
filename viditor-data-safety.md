@@ -10,6 +10,7 @@ This page supports the Google Play Data Safety declaration for the Viditor app.
 |---|---|---|---|
 | Videos / media files | Processed on-device only | No | Video editing and export |
 | Face detection data | Processed on-device only (ML Kit) | No | Automatic face censoring |
+| Tracking cache data | Stored on-device only | No | Reusing analysis for faster repeat exports |
 | Project settings | Stored on-device only | No | Saving edit state between sessions |
 | No personal data | — | — | — |
 
@@ -20,6 +21,7 @@ This page supports the Google Play Data Safety declaration for the Viditor app.
 - **No personal data** (name, email, location, contacts) is ever collected by this app
 - **Videos are never uploaded** — all editing and AI processing happens entirely on your device
 - **Face detection is on-device only** — Google ML Kit runs locally; no frames or detection results leave the device
+- **Tracking cache is local only** — per-project analysis cache is stored in app-private storage for export reuse
 - **No analytics, no advertising, no tracking** — Viditor contains no ad SDKs, analytics libraries, or tracking code
 - **No account required** — the app works fully offline with no sign-in
 
@@ -29,10 +31,10 @@ This page supports the Google Play Data Safety declaration for the Viditor app.
 
 | Permission | Why it is needed |
 |---|---|
-| `READ_MEDIA_VIDEO` / `READ_EXTERNAL_STORAGE` | Importing videos from your device gallery |
-| `WRITE_MEDIA_VIDEO` / `MANAGE_MEDIA` | Saving the exported video to your gallery |
-| `FOREGROUND_SERVICE` (type: `dataSync`) | Running video export as a foreground service so it completes reliably |
+| `FOREGROUND_SERVICE` + `FOREGROUND_SERVICE_DATA_SYNC` | Running long media operations (tracking analysis, preview baking, export) as user-visible foreground work so jobs complete reliably |
 | `POST_NOTIFICATIONS` | Showing export progress and completion notifications |
+
+Note: Viditor currently uses the Android system picker/storage access flow for media selection and does not declare broad media read/write permissions in the manifest.
 
 ---
 

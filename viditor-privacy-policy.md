@@ -14,10 +14,13 @@ You grant the App access to videos on your device in order to import and edit th
 Edited videos are exported to your device's media gallery only when you explicitly tap the export button.
 
 ### On-device AI processing (face detection)
-Viditor's automatic face censoring feature uses **Google ML Kit** to detect faces in your video. All face detection runs entirely on-device. No video frames, face data, or detection results are ever sent to a server or stored beyond the current editing session.
+Viditor's automatic face censoring feature uses **Google ML Kit** to detect faces in your video. All face detection runs entirely on-device. No video frames, face data, or detection results are ever sent to any server.
 
 ### Project data
 Project settings (effects, censor settings, overlays, trim points) are stored **locally on your device** in the app's private storage. This data is never transmitted.
+
+### Tracking cache data
+When you run tracking analysis, Viditor stores a per-project tracking cache locally in app-private storage. This cache contains timestamped detection regions and validation metadata (for example source/trim key and tracking analysis settings) so repeat exports can skip redundant analysis. This cache never leaves your device.
 
 ### Camera
 The App does not request camera access.
@@ -57,10 +60,10 @@ All project data is stored locally on your device in the app's private storage. 
 
 | Permission | Why it is needed |
 |---|---|
-| `READ_MEDIA_VIDEO` / storage access | Importing videos from your device for editing |
-| `WRITE_MEDIA_VIDEO` / `MANAGE_MEDIA` | Saving the exported video to your gallery |
-| `FOREGROUND_SERVICE` | Keeping the export process running while the screen is on |
+| `FOREGROUND_SERVICE` + `FOREGROUND_SERVICE_DATA_SYNC` | Running long media operations (tracking analysis, preview baking, export) as explicit foreground work started by the user |
 | `POST_NOTIFICATIONS` | Showing export progress in the notification bar |
+
+Note: Viditor currently uses Android's system picker/storage access flow for media import and does not declare broad media read/write permissions in the app manifest.
 
 ---
 
@@ -78,4 +81,4 @@ We may update this Privacy Policy from time to time. Any changes will be reflect
 
 ## Contact
 
-If you have any questions about this Privacy Policy, please open an issue on the project repository or contact the developer via the email address listed on the Google Play store listing.
+If you have any questions about this Privacy Policy, please contact the developer via the support email listed on the Google Play store listing.
