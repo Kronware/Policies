@@ -1,4 +1,4 @@
-# Viditor — Release Notes
+# Viditor - Video Censor Editor — Release Notes
 
 ---
 

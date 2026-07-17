@@ -1,4 +1,4 @@
-# Data Safety — Viditor
+# Data Safety — Viditor - Video Censor Editor
 
 This page supports the Google Play Data Safety declaration for the Viditor app.
 

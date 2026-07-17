@@ -1,4 +1,4 @@
-# Google Play Submission Pack (July 2026) — Viditor
+# Google Play Submission Pack (July 2026) — Viditor - Video Censor Editor
 
 This file provides copy-ready text for Play Console declarations.
 

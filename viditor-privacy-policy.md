@@ -1,4 +1,4 @@
-# Privacy Policy — Viditor
+# Privacy Policy — Viditor - Video Censor Editor
 
 **Last updated: July 2026**
 
