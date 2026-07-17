@@ -37,7 +37,6 @@ This page supports the Google Play Data Safety declaration for the Vidlr app.
 | `FOREGROUND_SERVICE_DATA_SYNC` | Required foreground service type for background file download operations |
 | `POST_NOTIFICATIONS` | Displaying download progress notifications (Android 13+) |
 | `WRITE_EXTERNAL_STORAGE` (Android 9 and below only) | Writing downloaded files to external storage on older Android versions |
-| `READ_MEDIA_VIDEO` | Reading video files in the download folder on Android 13+ |
 | `WAKE_LOCK` | Preventing the CPU from sleeping during active downloads to ensure file integrity |
 
 ---
