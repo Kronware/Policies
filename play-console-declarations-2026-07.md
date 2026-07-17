@@ -62,17 +62,3 @@ Viditor processes videos entirely on-device. The app does not upload video, imag
    - FOREGROUND_SERVICE_DATA_SYNC
    - POST_NOTIFICATIONS
 5. If any new SDK/permission is added later, update this file, policy page, and Data Safety form before release.
-
-## 5) Photo and Video Permissions Declaration (July 2026)
-
-**Submitted via**: App content → Photo and Video Permissions → Declaration form in Play Console.
-
-**Permission**: `READ_MEDIA_IMAGES` / `READ_MEDIA_VIDEO`
-
-**Declaration text:**
-
-Viditor is an on-device video editor. The app does not declare or request `READ_MEDIA_IMAGES` or `READ_MEDIA_VIDEO` permissions — neither is present in the manifest. File selection is handled entirely via the Storage Access Framework system picker (`ACTION_OPEN_DOCUMENT`), which is itself a system-provided picker requiring no storage permissions.
-
-The reason `PickVisualMedia` (Android photo picker) is technically insufficient for core app functionality is that it returns URIs with temporary grants only. Viditor stores project references persistently — when a user creates a project, the selected video URI is saved so the project can be reopened across app restarts and device reboots. This requires `ContentResolver.takePersistableUriPermission()`, which is only available for URIs returned by `ACTION_OPEN_DOCUMENT`. The `PickVisualMedia` API explicitly does not support persistable URI grants, making it unsuitable for a video editor that must access the source file in future sessions.
-
-No broad media storage permissions are used or requested at any point in the app. The current implementation already meets the intended spirit of the photo/video permissions policy by using an OS-provided system picker with zero permission footprint.
