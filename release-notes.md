@@ -1,4 +1,4 @@
-# Viditor - Video Censor Editor — Release Notes
+# BlurCut - Video Censor Editor — Release Notes
 
 ---
 
@@ -22,7 +22,7 @@ Stability and parity update for tracking/export workflows.
 
 ## Version 1.0 (Initial Release)
 
-First public release of Viditor.
+First public release of BlurCut.
 
 - Automatic face censoring with on-device ML Kit face detection
 - Optional on-device Post AI Analysis to refine automatic censor tracking after baseline detection
