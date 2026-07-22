@@ -1,6 +1,6 @@
 # Privacy Policy — Vidlr
 
-**Last updated: May 2026**
+**Last updated: July 2026**
 
 This Privacy Policy explains how the Vidlr app ("the App") handles your information.
 
@@ -22,6 +22,13 @@ Videos you choose to download are saved to the folder you select on your device.
 
 ### Advertising
 The free version of the App uses **Google AdMob** (Google Mobile Ads SDK) to display advertisements. Google indicates this SDK may collect and share data such as IP address, app interactions, diagnostic information, device identifiers, and account-linked identifiers for advertising, analytics, and fraud prevention. Depending on Google account state, this processing may include identifiers associated with personal info categories (such as email address or phone number) in Google's systems. Pro users do not see ads.
+
+For Play Data safety disclosure, these Google Mobile Ads SDK categories may apply in the free version:
+- Personal info: Email address, Phone number (account-linked in Google ads systems)
+- Location: Approximate location
+- Identifiers: Device or other identifiers
+- App activity: App interactions
+- App info and performance: Diagnostics
 
 For more information, see:
 - [Google Privacy Policy](https://policies.google.com/privacy)

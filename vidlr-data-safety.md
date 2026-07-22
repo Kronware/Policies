@@ -12,6 +12,9 @@ This page supports the Google Play Data Safety declaration for the Vidlr app.
 | Browser cookies and cache | Stored on-device only | No | Web browsing session; clearable by user |
 | Clipboard URL (read once, immediately cleared) | Read transiently, not stored | No | Offer to open copied URLs in browser |
 | Downloaded video files | Saved to device storage chosen by you | No | App functionality |
+| Approximate location (derived from network signals via AdMob, free version only) | May be collected by Google Mobile Ads SDK | Yes — to Google and ad partners | Advertising, analytics |
+| App interactions (ad views/clicks/session interaction via AdMob, free version only) | Yes — by Google Mobile Ads SDK | Yes — to Google and ad partners | Advertising, analytics |
+| Diagnostics (app/SDK performance via AdMob, free version only) | Yes — by Google Mobile Ads SDK | Yes — to Google and ad partners | Analytics, fraud prevention |
 | Device and account identifiers (via AdMob, free version only) | Yes — by Google Mobile Ads SDK | Yes — to Google and ad partners | Advertising, analytics, fraud prevention |
 | Personal info (email address / phone number, if associated with account identifiers used by Google ads systems) | May be processed by Google Mobile Ads SDK | Yes — by Google and ad partners | Advertising, analytics, fraud prevention |
 
@@ -25,6 +28,16 @@ This page supports the Google Play Data Safety declaration for the Vidlr app.
 - **Clipboard** is read only when the app gains focus and a URL is present; the content is cleared immediately and never stored or transmitted
 - **Downloaded files** are saved directly to the folder you choose on your device and are not uploaded or shared by the app
 - **Advertising** is shown only in the free version and is handled by Google AdMob (Google Mobile Ads SDK). The SDK may collect and share data such as IP address, app interactions, diagnostic data, device identifiers, and account-linked identifiers as described by Google. See [Google's Privacy Policy](https://policies.google.com/privacy) for full details. Pro users see no ads.
+
+### Google Mobile Ads SDK categories declared in Play Data safety
+
+When ads are enabled (free version), the app's Play Data safety declaration includes data categories that may be collected/shared by Google Mobile Ads SDK:
+
+- Personal info: Email address, Phone number (when associated with account-linked identifiers in Google ads systems)
+- Location: Approximate location
+- Identifiers: Device or other identifiers
+- App activity: App interactions
+- App info and performance: Diagnostics
 
 ---
 
