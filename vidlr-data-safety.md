@@ -12,18 +12,19 @@ This page supports the Google Play Data Safety declaration for the Vidlr app.
 | Browser cookies and cache | Stored on-device only | No | Web browsing session; clearable by user |
 | Clipboard URL (read once, immediately cleared) | Read transiently, not stored | No | Offer to open copied URLs in browser |
 | Downloaded video files | Saved to device storage chosen by you | No | App functionality |
-| Device identifiers (via AdMob, free version only) | Yes — by Google AdMob SDK | Yes — to Google for ads | Advertising |
+| Device and account identifiers (via AdMob, free version only) | Yes — by Google Mobile Ads SDK | Yes — to Google and ad partners | Advertising, analytics, fraud prevention |
+| Personal info (email address / phone number, if associated with account identifiers used by Google ads systems) | May be processed by Google Mobile Ads SDK | Yes — by Google and ad partners | Advertising, analytics, fraud prevention |
 
 ---
 
 ## Data handling summary
 
-- **No personal data** (name, email, location, contacts) is ever collected by this app
+- **The app itself does not request account sign-in or directly collect profile fields** such as name, email, or phone number
 - **Settings and session data are local only** — stored on-device, never uploaded to any server
 - **Browser data** (cookies, cache, web storage) is stored locally and can be fully cleared from Settings at any time
 - **Clipboard** is read only when the app gains focus and a URL is present; the content is cleared immediately and never stored or transmitted
 - **Downloaded files** are saved directly to the folder you choose on your device and are not uploaded or shared by the app
-- **Advertising** is shown only in the free version and is handled by Google AdMob. The AdMob SDK may collect device advertising IDs for ad personalisation. See [Google's Privacy Policy](https://policies.google.com/privacy) for full details. Pro users see no ads.
+- **Advertising** is shown only in the free version and is handled by Google AdMob (Google Mobile Ads SDK). The SDK may collect and share data such as IP address, app interactions, diagnostic data, device identifiers, and account-linked identifiers as described by Google. See [Google's Privacy Policy](https://policies.google.com/privacy) for full details. Pro users see no ads.
 
 ---
 

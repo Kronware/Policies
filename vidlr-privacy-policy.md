@@ -21,7 +21,7 @@ When the App comes into focus, it checks whether the clipboard contains a URL. I
 Videos you choose to download are saved to the folder you select on your device. The App does not upload, share, or transmit any downloaded content.
 
 ### Advertising
-The free version of the App uses **Google AdMob** to display advertisements. AdMob may collect device identifiers and usage data in accordance with Google's own privacy policies to serve personalised ads. Pro users do not see ads.
+The free version of the App uses **Google AdMob** (Google Mobile Ads SDK) to display advertisements. Google indicates this SDK may collect and share data such as IP address, app interactions, diagnostic information, device identifiers, and account-linked identifiers for advertising, analytics, and fraud prevention. Depending on Google account state, this processing may include identifiers associated with personal info categories (such as email address or phone number) in Google's systems. Pro users do not see ads.
 
 For more information, see:
 - [Google Privacy Policy](https://policies.google.com/privacy)
@@ -33,7 +33,7 @@ To opt out of personalised advertising, you can adjust your device's ad personal
 
 ## Information We Do NOT Collect
 
-- We do not collect your name, email address, or any account information
+- The app does not provide its own account system and does not directly request your email address or phone number
 - We do not collect location data
 - We do not record or transmit your browsing history to any server
 - We do not upload or share any files downloaded through the App
