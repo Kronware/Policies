@@ -2,6 +2,12 @@
 
 ---
 
+## Version 1.0.51
+
+Bug fixes and stability improvements.
+
+---
+
 ## Version 1.0.50
 
 Updated Google Play Billing support to meet latest Google Play requirements.
