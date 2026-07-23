@@ -36,6 +36,17 @@ This page supports the Google Play Data Safety declaration for the QR Scanner ap
 
 ---
 
+## Safeguards against interception or disproportionate public-authority access
+
+The following measures describe safeguards implemented by the Company for data handled by this app:
+
+- **Contractual measures**: The app's policy commits to local-only processing for scan history, camera data, and image scanning. For third-party services used by the free and purchase flows (Google AdMob and Google Play Billing), processing is governed by Google's contractual and policy framework rather than by company-operated processing infrastructure.
+- **Technical measures**: The Company does not operate app servers for user scan data and does not transmit scan history, camera frames, or selected images to company systems. On-device data is protected by Android app sandboxing. Because the app has no company-run transfer pipeline for this data, there is no company-controlled network path where interception risk is introduced for those data categories.
+- **Organisational measures**: Data minimisation is enforced by design (local storage only for scan history, no account system, no direct collection of name/email/location/contacts). Access to user scan data by Company personnel is not part of operations because the data remains on device and is not ingested into company systems.
+- **Scope clarification**: For AdMob and Google Play Billing processing, safeguards against interception or public-authority access are provided under Google's infrastructure and legal framework; those controls are outside the Company's direct operational control.
+
+---
+
 ## Permissions used
 
 | Permission | Why it is needed |
