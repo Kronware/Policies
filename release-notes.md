@@ -2,6 +2,12 @@
 
 ---
 
+## Version 1.0.52
+
+Expanded policy disclosures for data handling safeguards and transfer transparency.
+
+---
+
 ## Version 1.0.51
 
 Bug fixes and stability improvements.
