@@ -27,6 +27,15 @@ This page supports the Google Play Data Safety declaration for the QR Scanner ap
 
 ---
 
+## Onward transfer and recipient chain
+
+- **App-level onward transfer intent**: This app does **not** perform onward transfers of user data.
+- **Estimated further recipients by this app**: **0** (no app-operated servers, brokers, or downstream processors).
+- **Estimated processing chain length by this app**: **0 hops** beyond on-device processing for scan history, camera data, and image scanning.
+- **Third-party ecosystem note**: Where the free version uses Google AdMob, or purchases are handled by Google Play, any further processing is governed by Google's own privacy terms and infrastructure rather than by this app's own transfer pipeline.
+
+---
+
 ## Permissions used
 
 | Permission | Why it is needed |
