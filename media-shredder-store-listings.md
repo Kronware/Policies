@@ -1,6 +1,6 @@
 # Media Shredder — Store Listing Copy
 
-**Last Updated:** May 8, 2026
+**Last Updated:** July 30, 2026
 
 ---
 
@@ -32,31 +32,37 @@ Each file is overwritten with random data, its bitwise complement, then a second
 📂 Media Browser
 Browse all photos and videos on your device in a clean grid or list view. Filter by photos or videos, sort by date, name, or size, and multi-select files for batch shredding.
 
+⏰ Scheduled Auto Shredding (Pro)
+Set up automated shred schedules for any folder on your device. Choose specific days of the week and a time of day — Media Shredder will wake up and securely destroy the contents at exactly the right time, even overnight. Each rule runs independently so you can manage multiple folders on different schedules.
+
 🗑️ Recently Deleted (Pro)
 Access and securely shred items currently sitting in your device's recycle bin before they are permanently erased by the system. Preview thumbnails of pending items and shred them all with one tap.
 
-⭐ Pro — No Ads + Recently Deleted
-Upgrade once to remove all advertisements permanently and unlock secure shredding of your recycle bin — including a live thumbnail preview of what's waiting to be destroyed.
+⚙️ Options & Customisation
+Fine-tune Media Shredder to fit your workflow. Control companion artifact shredding (thumbnails, sidecar files), configure notification preferences, and manage app behaviour from a dedicated settings page.
+
+⭐ Pro — No Ads + Full Feature Access
+Upgrade once to remove all advertisements permanently and unlock the full feature set — including scheduled auto-shredding, recently deleted shredding with live thumbnail preview, and priority support.
 
 📊 Live Progress
 Watch real-time progress as each file is shredded, with a per-file activity log so you know exactly what was destroyed.
 
 WHO IS THIS FOR?
-Anyone who values privacy and wants confidence that deleted media cannot be easily recovered — whether selling a device, disposing of sensitive content, or simply staying private.
+Anyone who values privacy and wants confidence that deleted media cannot be easily recovered — whether selling a device, disposing of sensitive content, running automated folder cleanup, or simply staying private.
 
 ⚠️ WARNING: Shredding is permanent and irreversible. Always confirm you have selected the correct files before shredding. The developer is not responsible for accidental data loss.
 ```
 
 ---
 
-## Google Play — What's New (Version 1.0.39)
+## Google Play — What's New (Version 1.0.97)
 *(Release notes shown on Play Store update page — max 500 characters)*
 
 ```
-• Recently Deleted is now a Pro feature — preview recycle bin thumbnails and shred them with one tap
-• Shredding now uses Android's MediaStore API — no special file access permissions required
-• Fixed: Shred Selected button no longer overlaps the ad banner
-• Navigation menu reorganised — Shred Progress moved above Recently Deleted
+• Scheduled Auto Shredding (Pro) — set folders to auto-shred on specific days and times, even overnight
+• Reliable early morning scheduling — uses exact alarms to wake and run on time
+• New Options page — control companion artifact shredding, notifications, and app behaviour
+• Scheduling now survives device reboots automatically
 • Various stability and UI improvements
 ```
 

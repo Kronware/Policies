@@ -45,3 +45,14 @@ security_practices:
 file_operations:
   all_file_operations: on_device_only
   no_data_leaves_device_from_app: true
+
+foreground_service:
+  type: FOREGROUND_SERVICE_DATA_SYNC
+  purpose: >
+    Used exclusively by the scheduled auto-shredding feature (Pro). When a
+    scheduled shred rule fires, the app starts a foreground service to overwrite
+    and delete the target files entirely on-device. The DATA_SYNC service type
+    is declared as required by Android 14+. No data is synced to any external
+    server — all operations are local file overwrites only.
+  user_visible_notification: true
+  video_demo: FOREGROUND_SERVICE_DATA_SYNC_schedule_01.mp4

@@ -1,6 +1,6 @@
 # media-shredder Privacy Policy
 
-**Last Updated:** May 8, 2026
+**Last Updated:** July 30, 2026
 
 ## Overview
 
@@ -27,6 +27,11 @@ The App requests the following permissions:
 | `WRITE_EXTERNAL_STORAGE` | Write access for devices running Android 9 and below (not requested on Android 10+) |
 | `MANAGE_MEDIA` | Requests one-time write access to media files via Android MediaStore on Android 12+, enabling secure overwrite without per-file system dialogs |
 | `POST_NOTIFICATIONS` | Required on Android 13+ to display progress notifications during shredding operations |
+| `FOREGROUND_SERVICE` | Allows the App to run a foreground service so scheduled shred operations can complete reliably in the background |
+| `FOREGROUND_SERVICE_DATA_SYNC` | Declares the foreground service type used when executing scheduled shred jobs. Android 14+ requires apps to declare the specific foreground service type. This service type is used solely to perform the scheduled file overwrite and deletion on your device — no data is synced to or from any external server or service |
+| `SCHEDULE_EXACT_ALARM` | Allows the App to schedule shred rules at an exact time (e.g. 3:00 AM on specific days). Without this permission, Android may delay scheduled shreds by 15 minutes or more, causing them to be missed entirely |
+| `WAKE_LOCK` | Prevents the CPU from sleeping during an active scheduled shred so the operation completes without interruption |
+| `RECEIVE_BOOT_COMPLETED` | Allows the App to restore scheduled shred rules after a device reboot, so rules are not silently lost when the device is restarted |
 | `INTERNET` | Required for AdMob advertising SDK (free tier) and Google Play Billing (Pro purchase) |
 | `ACCESS_NETWORK_STATE` | Required for AdMob advertising SDK |
 
@@ -60,6 +65,18 @@ When you choose to shred files:
 2. The App deletes the file from the file system via Android's MediaStore API.
 3. No copy of the file data is retained by the App.
 
+## Scheduled Auto Shredding
+
+Media Shredder Pro includes a scheduled auto-shredding feature. When enabled:
+
+1. The App uses Android's `AlarmManager` to schedule an exact alarm at your chosen time and day(s).
+2. At the scheduled time, Android wakes the App via a broadcast receiver.
+3. The App runs a foreground service (`FOREGROUND_SERVICE_DATA_SYNC`) to perform the overwrite and deletion entirely on-device.
+4. A notification is shown while the service is active so you are always aware it is running.
+5. No file data, folder names, or schedule details are transmitted off-device.
+
+The foreground service type `DATA_SYNC` is used because it most closely matches the nature of the operation (reading and writing file data). No external sync or data transfer to any server is involved.
+
 ## Local Data Storage
 
 The App stores the following data locally on your device only:
@@ -67,6 +84,8 @@ The App stores the following data locally on your device only:
 | Data | Storage | Purpose |
 |---|---|---|
 | Pro status cache | SharedPreferences | Avoid querying Google Play on every app launch |
+| Scheduled shred rules | SharedPreferences | Store folder, time, and weekday settings for auto-shred schedules |
+| Shred run log | SharedPreferences | Record a local history of completed scheduled shred runs (retained for 30 days) |
 
 This data is never transmitted off-device.
 
