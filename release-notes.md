@@ -2,6 +2,12 @@
 
 ---
 
+## Version 1.0.53
+
+Improved Data Matrix scanning and fixed scan results so detected codes keep their original format instead of being converted to QR.
+
+---
+
 ## Version 1.0.52
 
 Expanded policy disclosures for data handling safeguards and transfer transparency.
