@@ -55,4 +55,4 @@ foreground_service:
     is declared as required by Android 14+. No data is synced to any external
     server — all operations are local file overwrites only.
   user_visible_notification: true
-  video_demo: FOREGROUND_SERVICE_DATA_SYNC_schedule_01.mp4
+  video_demo: MediaShredder_FOREGROUND_SERVICE_DATA_SYNC_schedule_01.mp4
