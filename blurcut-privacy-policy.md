@@ -60,10 +60,11 @@ All project data is stored locally on your device in the app's private storage. 
 
 | Permission | Why it is needed |
 |---|---|
+| `READ_MEDIA_VIDEO` | Reading video files from device storage for editing. Required on Android 13+ to access the user's video library |
 | `FOREGROUND_SERVICE` + `FOREGROUND_SERVICE_DATA_SYNC` | Running long media operations (tracking analysis, preview baking, export) as explicit foreground work started by the user |
 | `POST_NOTIFICATIONS` | Showing export progress in the notification bar |
-
-Note: BlurCut currently uses Android's system picker/storage access flow for media import and does not declare broad media read/write permissions in the app manifest.
+| `WAKE_LOCK` | Keeping the device awake during long-running processing so jobs complete reliably |
+| `REQUEST_IGNORE_BATTERY_OPTIMIZATIONS` | Requesting exemption from battery optimization for reliable completion of user-initiated processing jobs |
 
 ---
 

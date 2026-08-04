@@ -29,7 +29,20 @@ Record one short clip per feature showing:
 3. Progress updates in notification and/or in-app blocking progress UI
 4. Completion/cancel path
 
-## 2) Data Safety Form Suggested Answers
+## 2) READ_MEDIA_VIDEO Permission Declaration
+
+### Why the permission is needed
+BlurCut is a video editor. `READ_MEDIA_VIDEO` (Android 13+) is required to access video files from the user's device storage for editing, applying censor effects, and exporting processed video. Without this permission, the app cannot open videos for editing.
+
+### How it is used
+- The user selects a video from their library via the system media picker or file browser
+- The app reads the video for playback, frame extraction (thumbnails, ML face detection), and export processing
+- Video data is processed entirely on-device; no frames or video content are transmitted externally
+
+### User-facing justification
+The app requests this permission only when the user initiates a video import action. A runtime permission dialog is shown on Android 13+ before any video access occurs.
+
+## 3) Data Safety Form Suggested Answers
 
 Scope here is based on current app behavior and manifest permissions.
 
@@ -46,19 +59,22 @@ Scope here is based on current app behavior and manifest permissions.
 - No analytics/crash SDKs that transmit user data
 - Manifest declares foreground service and notifications only
 
-## 3) Privacy Policy Wording (Publish-ready)
+## 4) Privacy Policy Wording (Publish-ready)
 
 Use this summary at the top of your hosted privacy policy page:
 
 BlurCut processes videos entirely on-device. The app does not upload video, image, audio, or personal data to external servers. No user account is required. BlurCut's automatic censor workflow may include optional Post AI Analysis refinement, which also runs entirely on-device. BlurCut uses foreground-service notifications only to keep user-initiated media processing visible and reliable while running. Users can remove local project data at any time by clearing app storage or uninstalling the app.
 
-## 4) Final Pre-Submission Checks
+## 5) Final Pre-Submission Checks
 
 1. App content > Foreground services declaration completed for dataSync with feature videos uploaded.
 2. Data Safety form answers exactly match shipped app behavior and SDK behavior.
 3. Hosted privacy policy URL is live, public, and includes a support email address.
 4. Re-verify current manifest before submission:
+   - READ_MEDIA_VIDEO
    - FOREGROUND_SERVICE
    - FOREGROUND_SERVICE_DATA_SYNC
    - POST_NOTIFICATIONS
+   - WAKE_LOCK
+   - REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
 5. If any new SDK/permission is added later, update this file, policy page, and Data Safety form before release.

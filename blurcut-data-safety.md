@@ -31,10 +31,11 @@ This page supports the Google Play Data Safety declaration for the BlurCut app.
 
 | Permission | Why it is needed |
 |---|---|
+| `READ_MEDIA_VIDEO` | Reading video files from device storage for editing. Required on Android 13+ to access the user's video library |
 | `FOREGROUND_SERVICE` + `FOREGROUND_SERVICE_DATA_SYNC` | Running long media operations (tracking analysis, preview baking, export) as user-visible foreground work so jobs complete reliably |
 | `POST_NOTIFICATIONS` | Showing export progress and completion notifications |
-
-Note: BlurCut currently uses the Android system picker/storage access flow for media selection and does not declare broad media read/write permissions in the manifest.
+| `WAKE_LOCK` | Keeping the device awake during long-running processing (export, tracking analysis) so jobs complete reliably |
+| `REQUEST_IGNORE_BATTERY_OPTIMIZATIONS` | Requesting exemption from battery optimization for reliable completion of user-initiated export and analysis jobs |
 
 ---
 
