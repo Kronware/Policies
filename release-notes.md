@@ -2,6 +2,12 @@
 
 ---
 
+## Version 1.0.62
+
+Ads now load noticeably faster and are prepared in advance, so they appear right away when moving between scanning and results. Also includes improved crash reporting, general stability fixes and updated internal components.
+
+---
+
 ## Version 1.0.57
 
 Fixed an issue where ads were not displaying on the scanner screen until navigating to another page. Ads now load reliably on app launch with automatic retry on failure.
