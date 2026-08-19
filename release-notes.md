@@ -2,6 +2,12 @@
 
 ---
 
+## Version 1.0.65
+
+Scanned QR codes with app-specific links (WhatsApp, Telegram, and similar) are now recognized and can be opened directly, not just standard web addresses. Added a friendly message if no app is available to handle a link.
+
+---
+
 ## Version 1.0.62
 
 Ads now load noticeably faster and are prepared in advance, so they appear right away when moving between scanning and results. Also includes improved crash reporting, general stability fixes and updated internal components.
