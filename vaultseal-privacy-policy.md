@@ -28,11 +28,17 @@ VaultSeal is an offline-first, local encrypted vault application for Android.
 - **Metadata Purifier:** Optional feature that strips EXIF, GPS location tags, device signatures, and camera metadata from images before exporting or sharing.
 - **Clipboard Sentinel:** Users can ingest clipboard contents into encrypted storage with optional automated clearing of the system clipboard to prevent third-party app snooping.
 
-### C. Advertisements (Free Tier Only)
+### C. Android Device Permissions
+To provide secure vault storage, encryption, and import capabilities, VaultSeal may request the following permissions:
+- **Photos & Media (`READ_MEDIA_IMAGES`, `READ_MEDIA_VIDEO`, `READ_MEDIA_AUDIO`, `READ_EXTERNAL_STORAGE`):** Required exclusively when you choose to browse, select, and import photos, videos, and audio files from your device into your encrypted vault. VaultSeal only accesses files you explicitly choose to import. These files are encrypted locally and never transmitted across the network.
+- **Camera (`CAMERA`):** Required only if you use the optional in-app secure camera to capture photos or videos directly into encrypted vault storage.
+- **Notifications & Background Processing (`POST_NOTIFICATIONS`, `FOREGROUND_SERVICE_DATA_SYNC`):** Used to display real-time progress notifications when importing or encrypting large files and containers in the background.
+
+### D. Advertisements (Free Tier Only)
 - For non-Pro users, VaultSeal may display non-intrusive banner ads provided by Google AdMob. AdMob may collect device identifiers and standard advertising metrics in compliance with Google Play Developer Policies and Privacy Guidelines.
 - Pro users receive a completely ad-free experience.
 
-### D. In-App Purchases & Billing
+### E. In-App Purchases & Billing
 - VaultSeal offers optional Pro upgrades processed securely and directly through the Google Play In-App Billing system. We do not process, store, or receive your payment card credentials or personal billing details.
 
 ---
