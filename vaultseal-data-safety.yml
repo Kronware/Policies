@@ -1,0 +1,47 @@
+# Google Play Data Safety Declaration for VaultSeal
+# Application ID: app.kronware.vaultseal
+# Publisher: Kronware (kronware.io)
+
+app_id: app.kronware.vaultseal
+app_name: VaultSeal
+publisher: Kronware
+last_updated: "2026-08-30"
+
+overview:
+  collects_personal_data: false
+  data_shared_with_third_parties: false
+  encryption_in_transit: true
+  encryption_at_rest: true
+  user_can_request_deletion: true
+  offline_first: true
+
+data_types_collected:
+  user_content:
+    photos_videos: false
+    audio_files: false
+    files_docs: false
+    clipboard_content: false
+    notes: Storage is strictly local and encrypted on-device; never transmitted to developer servers.
+  personal_identifiers:
+    name: false
+    email: false
+    user_id: false
+    phone_number: false
+    physical_address: false
+  financial_info:
+    payment_info: false
+    purchase_history: Processed securely through Google Play Billing.
+
+advertising_and_analytics:
+  admob:
+    enabled_in_free_tier: true
+    purpose: App functionality and advertising for free-tier users
+    optional_or_required: Required in free tier; removed in Pro tier
+    sdk: Google Mobile Ads (AdMob)
+
+security_practices:
+  encryption_standard: AES-256-GCM authenticated encryption
+  ephemeral_master_keys: Master keys reside in RAM only while vault is unsealed
+  biometrics: Supported via Android BiometricPrompt and Android Keystore
+  secure_screen_flag: Default screenshot and app-switcher protection (user configurable)
+  metadata_stripping: User-toggleable EXIF and location stripping on exports
