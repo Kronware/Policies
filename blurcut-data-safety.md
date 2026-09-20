@@ -10,6 +10,7 @@ This page supports the Google Play Data Safety declaration for the BlurCut app.
 |---|---|---|---|
 | Videos / media files | Processed on-device only | No | Video editing and export |
 | Face detection data | Processed on-device only (ML Kit + optional Post AI Analysis refinement) | No | Automatic face censoring and analysis refinement |
+| Subject segmentation masks | Processed on-device only | No | Background Censoring foreground selection and background effects |
 | Tracking cache data | Stored on-device only | No | Reusing analysis for faster repeat exports |
 | Project settings | Stored on-device only | No | Saving edit state between sessions |
 | No personal data | — | — | — |
@@ -20,7 +21,7 @@ This page supports the Google Play Data Safety declaration for the BlurCut app.
 
 - **No personal data** (name, email, location, contacts) is ever collected by this app
 - **Videos are never uploaded** — all editing and AI processing happens entirely on your device
-- **Face detection and Post AI Analysis are on-device only** — all frames and analysis results stay on your device
+- **Face detection, Post AI Analysis, and background subject segmentation are on-device only** — all frames, masks, and analysis results stay on your device
 - **Tracking cache is local only** — per-project analysis cache is stored in app-private storage for export reuse
 - **No analytics, no advertising, no tracking** — BlurCut contains no ad SDKs, analytics libraries, or tracking code
 - **No account required** — the app works fully offline with no sign-in

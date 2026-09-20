@@ -13,14 +13,14 @@ You grant the App access to videos on your device in order to import and edit th
 
 Edited videos are exported to your device's media gallery only when you explicitly tap the export button.
 
-### On-device AI processing (face detection and analysis refinement)
-BlurCut's automatic face censoring feature uses **Google ML Kit** for baseline face detection and an optional **Post AI Analysis** refinement pass to augment detections and improve continuity in difficult sections. All of this processing runs entirely on-device. No video frames, face data, or detection results are ever sent to any server.
+### On-device AI processing (face detection, analysis refinement, and background segmentation)
+BlurCut's automatic face censoring feature uses **Google ML Kit** for baseline face detection and an optional **Post AI Analysis** refinement pass to augment detections and improve continuity in difficult sections. Background Censoring uses on-device subject segmentation to preserve selected foreground silhouettes while blurring or pixelating the surrounding background. All of this processing runs entirely on-device. No video frames, segmentation masks, face data, or detection results are ever sent to any server.
 
 ### Project data
 Project settings (effects, censor settings, overlays, trim points) are stored **locally on your device** in the app's private storage. This data is never transmitted.
 
 ### Tracking cache data
-When you run tracking analysis, BlurCut stores a per-project tracking cache locally in app-private storage. This cache contains timestamped detection regions and validation metadata (for example source/trim key and tracking analysis settings) so repeat exports can skip redundant analysis. When optional Post AI Analysis is enabled, the cached tracking data may also include on-device refinement results derived from the same video segment. This cache never leaves your device.
+When you run tracking analysis or Background Censoring, BlurCut stores a per-project tracking cache locally in app-private storage. This cache contains timestamped detection regions, segmentation masks, and validation metadata (for example source/trim key and tracking analysis settings) so repeat exports can skip redundant analysis. When optional Post AI Analysis is enabled, the cached tracking data may also include on-device refinement results derived from the same video segment. This cache never leaves your device.
 
 ### Camera
 The App does not request camera access.
@@ -45,6 +45,7 @@ BlurCut uses the following third-party libraries, all of which run entirely on-d
 | Library | Purpose | Data leaves device? |
 |---|---|---|
 | Google ML Kit (Face Detection) | Baseline face detection for auto-censor and Post AI Analysis refinement inputs | No |
+| On-device subject segmentation | Foreground subject masks for Background Censoring | No |
 | AndroidX Media3 / ExoPlayer | Video playback during editing | No |
 | AndroidX Media3 Transformer | Video export and effect rendering | No |
 
