@@ -20,13 +20,20 @@ Simply Censor uses Google ML Kit face detection and on-device foreground segment
 
 The App keeps the selected media, preview data, and censor settings only for the active editing session. It has no account system, project library, cloud backup, or server-side storage.
 
+### Foreground video processing
+
+When you start video analysis or export, Simply Censor uses an Android foreground service with a persistent, cancellable notification. This keeps the user-requested operation visible while it runs and does not upload the selected video or derived analysis data.
+
+### Advertising
+
+The free version uses Google Mobile Ads SDK to display banner and interstitial ads. Google Mobile Ads SDK may collect and share IP address, app interactions, diagnostic information, and device or account identifiers for advertising, analytics, and fraud prevention. This SDK data is encrypted in transit. Simply Censor does not use selected media, face results, or censor settings for advertising.
+
 ## Information We Do Not Collect
 
 - We do not collect names, email addresses, account information, or contacts.
 - We do not upload photos, videos, audio, face data, or censor settings.
-- We do not collect location data.
-- We do not use advertising, analytics, crash reporting, or tracking SDKs.
-- We do not sell or share data with third parties.
+- We do not use selected media, face data, or censor settings for advertising, analytics, or tracking.
+- We do not sell selected media, face data, or censor settings.
 
 ## Third-Party Libraries
 
@@ -35,12 +42,13 @@ The App keeps the selected media, preview data, and censor settings only for the
 | Google ML Kit Face Detection | Finding faces for automatic censoring | No |
 | Google ML Kit Selfie Segmentation | Identifying foreground subjects for background censoring | No |
 | AndroidX Media3 | Video preview and local export processing | No |
+| Google Mobile Ads SDK | Banner and interstitial advertising | Yes, for advertising-related SDK data described above |
 
 ## Permissions Used
 
 | Permission | Why it is needed |
 | --- | --- |
-| `FOREGROUND_SERVICE` and `FOREGROUND_SERVICE_DATA_SYNC` | Keeping user-started video analysis and export visible and reliable while they run. |
+| `FOREGROUND_SERVICE` and `FOREGROUND_SERVICE_DATA_SYNC` | Keeping user-started video analysis and export visible and reliable with a persistent, cancellable notification while they run. |
 | `POST_NOTIFICATIONS` | Showing progress and completion notifications for user-started video processing. |
 
 The App uses Android's system media picker rather than requesting broad access to your photo or video library.
