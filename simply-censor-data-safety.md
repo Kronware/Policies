@@ -13,7 +13,7 @@ This page supports the Google Play Data Safety declaration for Simply Censor.
 | Personal data | No | No | Not applicable |
 | Approximate location | Yes, through the Google Mobile Ads SDK IP-address collection | Yes, with Google advertising services | Advertising, analytics, fraud prevention, and security |
 | App interactions | Yes, through the Google Mobile Ads SDK | Yes, with Google advertising services | Advertising, analytics, fraud prevention, and security |
-| Diagnostics | Yes, through the Google Mobile Ads SDK | Yes, with Google advertising services | Advertising, analytics, fraud prevention, and security |
+| Diagnostics | Yes, through Google Mobile Ads SDK and Firebase Crashlytics when configured | Yes, with Google advertising services and Firebase | Advertising, analytics, fraud prevention, security, and crash diagnostics |
 | Device or other IDs | Yes, including advertising and app-set identifiers through the Google Mobile Ads SDK | Yes, with Google advertising services | Advertising, analytics, fraud prevention, and security |
 
 ## Data Handling Summary
@@ -22,6 +22,7 @@ This page supports the Google Play Data Safety declaration for Simply Censor.
 - Photos and videos are never uploaded.
 - Face detection and foreground segmentation run on-device.
 - The free version uses Google Mobile Ads SDK for banner and interstitial ads. Google Mobile Ads SDK automatically collects and shares IP address, app interactions, diagnostics, and device/account identifiers for advertising, analytics, and fraud prevention.
+- Firebase Crashlytics sends crash and application-not-responding diagnostics when configured for a released version. It does not receive selected media, face results, censor settings, or exported files.
 - Google Mobile Ads SDK data is encrypted in transit with TLS. See Google's [Mobile Ads SDK Play Data Disclosure](https://developers.google.com/admob/android/privacy/play-data-disclosure).
 - The core censoring and export workflow works without a network connection; ad loading requires network access.
 

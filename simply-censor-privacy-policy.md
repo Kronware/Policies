@@ -28,6 +28,10 @@ When you start video analysis or export, Simply Censor uses an Android foregroun
 
 The free version uses Google Mobile Ads SDK to display banner and interstitial ads. Google Mobile Ads SDK may collect and share IP address, app interactions, diagnostic information, and device or account identifiers for advertising, analytics, and fraud prevention. This SDK data is encrypted in transit. Simply Censor does not use selected media, face results, or censor settings for advertising.
 
+### Crash and application-not-responding diagnostics
+
+When Firebase Crashlytics is configured for a released version, Simply Censor sends uncaught-crash and application-not-responding diagnostic reports to Firebase. These reports can include device and app diagnostic information, app version, thread details, and stack traces. They do not include selected media, face results, censor settings, or exported files.
+
 ## Information We Do Not Collect
 
 - We do not collect names, email addresses, account information, or contacts.
@@ -43,6 +47,7 @@ The free version uses Google Mobile Ads SDK to display banner and interstitial a
 | Google ML Kit Selfie Segmentation | Identifying foreground subjects for background censoring | No |
 | AndroidX Media3 | Video preview and local export processing | No |
 | Google Mobile Ads SDK | Banner and interstitial advertising | Yes, for advertising-related SDK data described above |
+| Firebase Crashlytics | Crash and application-not-responding diagnostics | Yes, for diagnostic reports described above |
 
 ## Permissions Used
 
