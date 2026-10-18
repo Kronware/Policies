@@ -2,13 +2,13 @@
 
 **Package**: com.kronware.blurcut
 **Permission**: android.permission.READ_MEDIA_VIDEO
-**Date**: August 2026
+**Date**: October 18, 2026
 
 ---
 
 ## App Purpose
 
-BlurCut is a privacy-focused on-device video editor that allows users to blur or pixelate faces and eyes in videos. The app performs all processing locally on the device — no data is uploaded to external servers.
+BlurCut is an on-device video editor that allows users to blur or pixelate faces and eyes in videos. Video editing and AI media processing run locally; video content, tracking results, and segmentation masks are not uploaded. Separately, Google advertising, analytics, diagnostic, and billing services communicate with Google as described in the [privacy policy](blurcut-privacy-policy.md).
 
 ## Why READ_MEDIA_VIDEO Is Required
 
@@ -39,7 +39,7 @@ Without this permission, the app cannot access any video content and is non-func
 
 - Permission is requested at runtime only when the user initiates a video import
 - The user can revoke the permission at any time via device Settings → Apps → BlurCut → Permissions
-- All project data is stored locally and removed on app uninstall
+- App-private project data is stored locally and can be cleared through Android Settings or uninstalling; Android backup and restore may retain or restore data according to device settings
 
 ## Relevant Google Play Policy Categories
 
@@ -50,6 +50,8 @@ Without this permission, the app cannot access any video content and is non-func
 
 | Permission | Purpose |
 |---|---|
+| `INTERNET` and `ACCESS_NETWORK_STATE` (included through SDKs) | Advertising, analytics, crash reporting, and purchase service connections, not video uploads |
+| `com.google.android.gms.permission.AD_ID` | Advertising identifier access by Google SDKs where available and permitted |
 | `FOREGROUND_SERVICE` + `FOREGROUND_SERVICE_DATA_SYNC` | User-initiated long-running media processing (tracking analysis, export) |
 | `POST_NOTIFICATIONS` | Export progress and completion notifications |
 | `WAKE_LOCK` | Keeping device awake during processing |

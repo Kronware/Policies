@@ -47,23 +47,26 @@ The app requests this permission only when the user initiates a video import act
 Scope here is based on current app behavior and manifest permissions.
 
 ### High-level
-- Does your app collect or share any required user data types?: No
-- Is all data encrypted in transit?: Not applicable (no data transmitted to remote servers)
-- Do you provide a data deletion request mechanism?: Not applicable for server-side data (no server-side user data). Local data can be removed by uninstalling or clearing app storage.
+- Does your app collect or share any required user data types?: Yes
+- Is all data encrypted in transit?: Yes for the Google SDK transmissions described in the privacy policy
+- Do you provide a data deletion request mechanism?: No dedicated request mechanism for uploaded SDK data. Clearing local storage does not delete previously transmitted data
+- Account creation: My app does not allow users to create an account; external-account sign-in is not supported
+- See [Data Safety](blurcut-data-safety.md) for data types, purposes, and Google service configuration caveats
 
 ### Why this answer set is consistent
-- Processing is on-device only
+- Video editing and AI media processing are on-device only
 - Optional Post AI Analysis is on-device only and does not upload frames or analysis data
 - No account system
-- No ad SDKs
-- No analytics/crash SDKs that transmit user data
-- Manifest declares foreground service and notifications only
+- AdMob collects and shares identifiers, IP-derived approximate location, interactions, and diagnostics
+- Firebase Analytics and Crashlytics transmit usage, purchase, crash, installation, and diagnostic information
+- Google Play Billing handles Pro purchases and subscriptions
+- Manifest and SDK permissions include advertising ID and network access as well as local media and foreground-service permissions
 
 ## 4) Privacy Policy Wording (Publish-ready)
 
 Use this summary at the top of your hosted privacy policy page:
 
-BlurCut processes videos entirely on-device. The app does not upload video, image, audio, or personal data to external servers. No user account is required. BlurCut's automatic censor workflow may include optional Post AI Analysis refinement, which also runs entirely on-device. BlurCut uses foreground-service notifications only to keep user-initiated media processing visible and reliable while running. Users can remove local project data at any time by clearing app storage or uninstalling the app.
+BlurCut processes videos entirely on-device and does not upload video frames, audio, tracking results, or segmentation masks. No user account is required. The App uses AdMob for advertising, Firebase Analytics for usage and purchase analytics, Firebase Crashlytics for crash reporting, and Google Play Billing for Pro purchases. These services transmit identifiers, approximate location, interactions, purchase events, and diagnostics as described in the full privacy policy. Local storage controls do not delete data already sent to Google services.
 
 ## 5) Final Pre-Submission Checks
 
@@ -77,4 +80,6 @@ BlurCut processes videos entirely on-device. The app does not upload video, imag
    - POST_NOTIFICATIONS
    - WAKE_LOCK
    - REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
+   - com.google.android.gms.permission.AD_ID
+   - INTERNET and ACCESS_NETWORK_STATE (included through SDKs)
 5. If any new SDK/permission is added later, update this file, policy page, and Data Safety form before release.

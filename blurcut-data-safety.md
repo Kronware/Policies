@@ -2,6 +2,10 @@
 
 This page supports the Google Play Data Safety declaration for the BlurCut app.
 
+**Last updated: October 18, 2026**
+
+BlurCut collects and shares some data through Google SDKs. Answer **Yes** to the Play Data Safety question about collection or sharing. Video editing and AI media processing remain on-device.
+
 ---
 
 ## Data collected and shared
@@ -13,18 +17,27 @@ This page supports the Google Play Data Safety declaration for the BlurCut app.
 | Subject segmentation masks | Processed on-device only | No | Background Censoring foreground selection and background effects |
 | Tracking cache data | Stored on-device only | No | Reusing analysis for faster repeat exports |
 | Project settings | Stored on-device only | No | Saving edit state between sessions |
-| No personal data | — | — | — |
+| Approximate location (IP-derived) | Yes | Yes, through AdMob | Advertising, analytics, fraud prevention, security, and compliance |
+| App interactions | Yes | Yes, through AdMob | Advertising, analytics, fraud prevention, security, and compliance |
+| Diagnostics | Yes | Yes, through AdMob | Advertising, analytics, fraud prevention, security, and compliance; SDK reliability |
+| Device or other IDs | Yes | Yes, through AdMob | Advertising, analytics, fraud prevention, security, and compliance; installation identification |
+| Crash logs | Yes, through Firebase Crashlytics | Generally service-provider processing, not sharing under Play's exception | Analytics and reliability analysis |
+| Purchase history | Yes, through Firebase Analytics | Generally service-provider processing, not sharing under Play's exception | Purchase analytics |
+
+Firebase-only sharing answers depend on the actual Analytics data-sharing settings, advertising integrations, and other enabled service features. Review those settings before submitting the form. SDK transmissions are not declared ephemeral. Automatic SDK collection has no general in-app opt-out. Purchase-event collection applies to users who make purchases.
 
 ---
 
 ## Data handling summary
 
-- **No personal data** (name, email, location, contacts) is ever collected by this app
+- **Google SDK collection is included**: AdMob, Firebase Analytics, Crashlytics, and supporting services transmit identifiers, usage information, and diagnostics. Approximate location can be derived from IP addresses; the App does not request GPS location
 - **Videos are never uploaded** — all editing and AI processing happens entirely on your device
 - **Face detection, Post AI Analysis, and background subject segmentation are on-device only** — all frames, masks, and analysis results stay on your device
 - **Tracking cache is local only** — per-project analysis cache is stored in app-private storage for export reuse
-- **No analytics, no advertising, no tracking** — BlurCut contains no ad SDKs, analytics libraries, or tracking code
-- **No account required** — the app works fully offline with no sign-in
+- **Advertising and analytics**: the free version displays AdMob ads; Pro removes displayed ads, not all SDK data collection
+- **ML Kit media stays local**: SDK usage and diagnostic metadata may still be transmitted to Google
+- **Purchases**: Google Play Billing handles Pro purchases and subscriptions; Firebase Analytics may record purchase events. The App does not receive payment card details
+- **No account creation or sign-in**: Google Play purchases do not create an account in BlurCut
 
 ---
 
@@ -32,6 +45,8 @@ This page supports the Google Play Data Safety declaration for the BlurCut app.
 
 | Permission | Why it is needed |
 |---|---|
+| `INTERNET` and `ACCESS_NETWORK_STATE` (included through SDKs) | Connecting to Google advertising, analytics, diagnostics, and purchase services |
+| `com.google.android.gms.permission.AD_ID` | Advertising ID access by Google SDKs where available and permitted |
 | `READ_MEDIA_VIDEO` | Reading video files from device storage for editing. Required on Android 13+ to access the user's video library |
 | `FOREGROUND_SERVICE` + `FOREGROUND_SERVICE_DATA_SYNC` | Running long media operations (tracking analysis, preview baking, export) as user-visible foreground work so jobs complete reliably |
 | `POST_NOTIFICATIONS` | Showing export progress and completion notifications |
@@ -42,21 +57,29 @@ This page supports the Google Play Data Safety declaration for the BlurCut app.
 
 ## User controls
 
-- **Project data**: Cleared automatically on uninstall. Can also be cleared from device Settings → Apps → BlurCut → Storage → Clear Data
+- **Project data**: App-private device data can be cleared from Android Settings or by uninstalling. Android backup and restore may retain or restore data according to device settings
 - **Exported videos**: Saved to your gallery — can be deleted like any other video
+- **Advertising identifiers**: Android provides advertising ID reset or deletion controls where supported; these do not stop all SDK collection
+- **Uploaded SDK data**: Clearing storage or uninstalling does not delete data already sent to Google. The App has no dedicated uploaded-data deletion request mechanism or general analytics/crash-reporting opt-out. Do not claim deletion within 90 days
 
 ---
 
 ## Security
 
-All data is stored in Android's application sandbox. No data is transmitted to external servers by this app.
+Local app-private data is stored in Android's application sandbox. AdMob and Firebase encrypt SDK data in transit using TLS/HTTPS. Videos, frames, masks, and tracking results are not uploaded by the editing pipeline.
 
 ---
 
-## App does NOT use the following
+## Accounts and Additional Disclosures
 
-- Advertising SDKs
-- Analytics or crash reporting SDKs (beyond what Android provides by default)
-- Cloud storage or sync
-- User accounts or authentication
-- In-app purchases
+- Select **My app does not allow users to create an account**; the App does not support external-account sign-in either
+- Declare **Contains ads: Yes** and **Advertising ID usage: Yes** in the applicable Play Console sections
+- Accessing local media for editing does not itself constitute off-device collection for Data Safety
+- The declaration must cover applicable distributed versions and enabled Google service settings, not just one user's Pro status or privacy choices
+
+## References
+
+- [Privacy policy](blurcut-privacy-policy.md)
+- [Google Mobile Ads SDK data disclosure](https://developers.google.com/admob/android/privacy/play-data-disclosure)
+- [Firebase data disclosure](https://firebase.google.com/docs/android/play-data-disclosure)
+- [Google Analytics data disclosure](https://support.google.com/analytics/answer/11582702)
