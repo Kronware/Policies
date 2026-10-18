@@ -11,6 +11,8 @@ This Privacy Policy explains how the BlurCut app ("the App") handles your inform
 ### Videos and media
 You grant the App access to videos on your device in order to import and edit them. Videos are processed entirely **on your device** and are never transmitted to any server or third party.
 
+Video import uses Android's system document picker. Access is limited to the files you select, and read access can be retained to reopen projects. The App does not request broad photo or video library permissions (`READ_MEDIA_IMAGES` or `READ_MEDIA_VIDEO`).
+
 Edited videos are exported to your device's media gallery only when you explicitly tap the export button.
 
 ### On-device AI processing (face detection, analysis refinement, and background segmentation)
@@ -97,7 +99,6 @@ You can reset or delete your advertising ID through Android's advertising privac
 |---|---|
 | `INTERNET` and `ACCESS_NETWORK_STATE` (included through SDKs) | Connecting to advertising, analytics, crash-reporting, and purchase services |
 | `com.google.android.gms.permission.AD_ID` | Allowing Google SDKs to access the advertising ID where available and permitted |
-| `READ_MEDIA_VIDEO` | Reading video files from device storage for editing. Required on Android 13+ to access the user's video library |
 | `FOREGROUND_SERVICE` + `FOREGROUND_SERVICE_DATA_SYNC` | Running long media operations (tracking analysis, preview baking, export) as explicit foreground work started by the user |
 | `POST_NOTIFICATIONS` | Showing export progress in the notification bar |
 | `WAKE_LOCK` | Keeping the device awake during long-running processing so jobs complete reliably |

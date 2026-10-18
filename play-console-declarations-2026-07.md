@@ -29,18 +29,21 @@ Record one short clip per feature showing:
 3. Progress updates in notification and/or in-app blocking progress UI
 4. Completion/cancel path
 
-## 2) READ_MEDIA_VIDEO Permission Declaration
+## 2) Photo and Video Access
 
-### Why the permission is needed
-BlurCut is a video editor. `READ_MEDIA_VIDEO` (Android 13+) is required to access video files from the user's device storage for editing, applying censor effects, and exporting processed video. Without this permission, the app cannot open videos for editing.
+### Why selected-file access is sufficient
+BlurCut needs access only to videos selected by the user. It uses Android's system document picker (`ACTION_OPEN_DOCUMENT`) instead of requesting broad `READ_MEDIA_VIDEO` or `READ_MEDIA_IMAGES` permissions. Being a video editor does not by itself establish that system pickers are insufficient.
 
 ### How it is used
-- The user selects a video from their library via the system media picker or file browser
+- The user selects a video through Android's system document picker; the App retains the selected URI's read grant for reopening projects
 - The app reads the video for playback, frame extraction (thumbnails, ML face detection), and export processing
 - Video data is processed entirely on-device; no frames or video content are transmitted externally
 
 ### User-facing justification
-The app requests this permission only when the user initiates a video import action. A runtime permission dialog is shown on Android 13+ before any video access occurs.
+The user chooses which video the App can read in the system picker. No broad photo or video library runtime permission is requested at startup or during import.
+
+### Play remediation
+Publish a new app bundle without the restricted permissions and replace or deactivate affected artifacts on all tracks identified by Google. Updating policy pages alone does not remove permissions from already-uploaded bundles. Verify the merged release manifest before submitting.
 
 ## 3) Data Safety Form Suggested Answers
 
@@ -74,7 +77,7 @@ BlurCut processes videos entirely on-device and does not upload video frames, au
 2. Data Safety form answers exactly match shipped app behavior and SDK behavior.
 3. Hosted privacy policy URL is live, public, and includes a support email address.
 4. Re-verify current manifest before submission:
-   - READ_MEDIA_VIDEO
+   - Confirm READ_MEDIA_VIDEO and READ_MEDIA_IMAGES are absent
    - FOREGROUND_SERVICE
    - FOREGROUND_SERVICE_DATA_SYNC
    - POST_NOTIFICATIONS

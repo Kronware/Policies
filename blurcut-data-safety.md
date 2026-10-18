@@ -32,6 +32,7 @@ Firebase-only sharing answers depend on the actual Analytics data-sharing settin
 
 - **Google SDK collection is included**: AdMob, Firebase Analytics, Crashlytics, and supporting services transmit identifiers, usage information, and diagnostics. Approximate location can be derived from IP addresses; the App does not request GPS location
 - **Videos are never uploaded** — all editing and AI processing happens entirely on your device
+- **Selected-file access only**: Android's system document picker grants access to the videos you choose. The App retains read access for reopening projects without requesting `READ_MEDIA_IMAGES` or `READ_MEDIA_VIDEO`
 - **Face detection, Post AI Analysis, and background subject segmentation are on-device only** — all frames, masks, and analysis results stay on your device
 - **Tracking cache is local only** — per-project analysis cache is stored in app-private storage for export reuse
 - **Advertising and analytics**: the free version displays AdMob ads; Pro removes displayed ads, not all SDK data collection
@@ -47,7 +48,6 @@ Firebase-only sharing answers depend on the actual Analytics data-sharing settin
 |---|---|
 | `INTERNET` and `ACCESS_NETWORK_STATE` (included through SDKs) | Connecting to Google advertising, analytics, diagnostics, and purchase services |
 | `com.google.android.gms.permission.AD_ID` | Advertising ID access by Google SDKs where available and permitted |
-| `READ_MEDIA_VIDEO` | Reading video files from device storage for editing. Required on Android 13+ to access the user's video library |
 | `FOREGROUND_SERVICE` + `FOREGROUND_SERVICE_DATA_SYNC` | Running long media operations (tracking analysis, preview baking, export) as user-visible foreground work so jobs complete reliably |
 | `POST_NOTIFICATIONS` | Showing export progress and completion notifications |
 | `WAKE_LOCK` | Keeping the device awake during long-running processing (export, tracking analysis) so jobs complete reliably |
