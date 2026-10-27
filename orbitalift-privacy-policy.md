@@ -1,6 +1,6 @@
 # Orbitalift Privacy Policy
 
-**Effective date: October 25, 2026**
+**Effective date: October 27, 2026**
 
 Orbitalift is an Android gravity and physics puzzle app developed by **Kronware**. This policy applies to Orbitalift, including the package **com.kronware.orbitalift**. For privacy questions or requests, email **[support@kronware.io](mailto:support@kronware.io)**.
 
@@ -12,25 +12,25 @@ Kronware does not operate a gameplay account, cloud-save service or server that 
 
 ## Advertising and consent
 
-The Android app uses **Google AdMob / the Google Mobile Ads SDK** for optional rewarded ads and occasional interstitial ads. It uses **Google's User Messaging Platform (UMP)** for applicable consent and privacy choices. These services communicate with Google and, where applicable, its advertising partners; local gameplay storage does not mean the Android app collects no data through its SDKs.
+The current Android app uses the **Start.io Android SDK** for optional rewarded videos and occasional between-arena interstitial ads. This replaces Google AdMob and Google's User Messaging Platform (UMP). Current builds, including signed Internal testing releases, enforce Start.io test mode using its official demo App ID. Test ads do not generate advertising revenue, but test mode does not guarantee that the SDK processes no data. Older app versions may still use Google's advertising services under the prior policy.
 
-Google's advertising SDK collects and shares information for advertising, ad measurement, analytics and fraud prevention. This includes:
+Start.io describes processing information for advertising, measurement, diagnostics and fraud prevention. Depending on permissions, device settings, consent and SDK behavior, this may include:
 
 - IP address, which can be used to estimate a device's approximate location.
 - App and ad interactions, such as launches, taps and video views.
-- Diagnostic and performance information, such as startup time, hangs and energy usage.
-- Device and account identifiers, including the advertising ID and app set ID, and other identifiers where applicable.
+- SDK diagnostic, crash and performance information.
+- Device identifiers, including the Android advertising ID where available, and device/OS, network and language information. Start.io also discloses installed-app queries where applicable.
 
-The information processed depends on the SDK, device settings, consent choices, location and available advertising features. UMP also processes information needed to determine applicable privacy requirements and manage consent choices. Non-personalized or limited ads do not necessarily mean that no information is processed.
+This integration does not request precise-location or Bluetooth access for advertising or supply your gamer identity, scores or journey save to Start.io. An approximate location may still be inferred from your IP address. Start.io's own processing, sharing, retention and international transfers are governed by its policies and your applicable choices. Non-personalized ads do not necessarily mean that no information is processed.
 
-The app requests ads only when its consent integration reports that ads may be requested. Where required, a consent message lets you review available purposes and choices. Where Google's privacy service requires it, an **Ad privacy options** entry is available in the app's Pause menu so you can revisit your choices. Your choice does not guarantee that an ad will be available.
+Before initializing Start.io, the app asks whether to allow personal data to be used for personalized ads and passes your choice to the SDK. Declining personalization does not prevent local gameplay or promise that essential ad processing stops. An **Ad privacy options** entry in Pause lets you change this preference. Start.io may also present its own applicable consent message. Your choice does not guarantee that an ad will be available.
 
-Google states that information collected by the Google Mobile Ads SDK is encrypted in transit using TLS. Google's and its partners' processing, retention and international transfers are governed by their own policies and the applicable settings and choices. See:
+For Start.io's disclosures, privacy rights and opt-out or deletion requests, see:
 
-- [Google Privacy Policy](https://policies.google.com/privacy)
-- [How Google uses information from sites or apps that use its services](https://policies.google.com/technologies/partner-sites)
-- [Google Mobile Ads SDK data disclosures](https://developers.google.com/admob/android/privacy/play-data-disclosure)
-- [Google advertising controls](https://myadcenter.google.com/)
+- [Start.io End User Privacy Policy](https://www.start.io/policy/privacy-policy/)
+- [Start.io Android SDK data disclosures](https://support.start.io/hc/en-us/articles/4413793394962-Google-Play-Safety-Section-Data-Disclosure)
+- [Start.io opt-out choices](https://www.start.io/do-not-sell-or-sharemy-personal-information/)
+- [Google Privacy Policy](https://policies.google.com/privacy), applicable to Google services below and older app versions using AdMob.
 
 Orbitalift does not separately integrate Firebase Analytics, a Facebook SDK or a developer-operated analytics backend. Optional crash reporting is described below. Advertising SDK measurement and diagnostics still apply as described above.
 
@@ -58,7 +58,7 @@ The most recent share image is kept in the app's private storage and replaced wh
 
 Local progress, settings, backup saves and the latest share image remain on the device until replaced or removed. Android's app-storage controls can remove local app data; uninstalling ordinarily removes the app's private data, although platform backups may remain. Removing app data also removes your saved progress, XP, inventory and settings. Orbitalift does not provide a cloud account from which Kronware can recover that progress.
 
-Deleting local app data does not delete information already processed by Google, advertising partners or a sharing destination. Orbitalift does not currently provide an in-app mechanism to delete those providers' records. Their retention periods and privacy-request processes apply. You can use Android's advertising privacy controls to reset or delete your advertising ID where supported; this does not stop all advertising or SDK processing.
+Deleting local app data does not delete information already processed by Google, Start.io, advertising partners or a sharing destination. Orbitalift does not currently provide an in-app mechanism to delete those providers' records. Their retention periods and privacy-request processes apply. You can use Android's advertising privacy controls to reset or delete your advertising ID where supported; this does not stop all advertising or SDK processing.
 
 You may have rights to access, correct, delete, restrict or object to processing, withdraw consent, or make a complaint to a privacy regulator, depending on your jurisdiction. Contact **support@kronware.io** with requests about Kronware's handling of your information. We may need information to understand or verify a request. If you email us, we receive your email address and the information you choose to include, and use them to respond and handle the request. Do not include passwords or other sensitive information unnecessarily. Requests concerning a provider's independent processing may need to be directed to that provider.
 
