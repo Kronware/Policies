@@ -1,6 +1,6 @@
 # Privacy Policy — Vidlr
 
-**Last updated: July 2026**
+**Last updated: October 27, 2026**
 
 This Privacy Policy explains how the Vidlr app ("the App") handles your information.
 
@@ -21,9 +21,13 @@ When the App comes into focus, it checks whether the clipboard contains a URL. I
 Videos you choose to download are saved to the folder you select on your device. The App does not upload, share, or transmit any downloaded content.
 
 ### Advertising
-The free version of the App uses **Google AdMob** (Google Mobile Ads SDK) to display advertisements. Google indicates this SDK may collect and share data such as IP address, app interactions, diagnostic information, device identifiers, and account-linked identifiers for advertising, analytics, and fraud prevention. Depending on Google account state, this processing may include identifiers associated with personal info categories (such as email address or phone number) in Google's systems. Pro users do not see ads.
+The current free version of the App uses **Start.io** to display advertisements. Start.io may collect IP addresses, approximate location inferred from network information, advertising identifiers where available, device and network information, ad interactions, and SDK diagnostics/crash logs. Where available and permitted, it may query whether certain apps are installed. Advertising data may be shared with advertising and measurement partners as described in Start.io's policy. The App does not request precise-location or Bluetooth permissions for advertising. Pro users do not see ads.
 
-For Play Data safety disclosure, these Google Mobile Ads SDK categories may apply in the free version:
+Start.io's built-in disclosure/consent feature remains enabled. Test-ad builds are not a guarantee that the SDK collects no data. See [Start.io's End User Privacy Policy](https://www.start.io/policy/privacy-policy/) for data processing, retention, consent, and opt-out rights.
+
+Older versions of the App use **Google AdMob** (Google Mobile Ads SDK). Google indicates this SDK may collect and share data such as IP address, app interactions, diagnostic information, device identifiers, and account-linked identifiers for advertising, analytics, and fraud prevention. Depending on Google account state, this processing may include identifiers associated with personal info categories (such as email address or phone number) in Google's systems.
+
+For older AdMob versions, these Google Mobile Ads SDK categories may apply in the free version:
 - Personal info: Email address, Phone number (account-linked in Google ads systems)
 - Location: Approximate location
 - Identifiers: Device or other identifiers
@@ -34,23 +38,23 @@ For more information, see:
 - [Google Privacy Policy](https://policies.google.com/privacy)
 - [How Google uses data when you use partners' apps](https://policies.google.com/technologies/partner-sites)
 
-To opt out of personalised advertising, you can adjust your device's ad personalisation settings.
+To limit personalised advertising, use your device's advertising-ID controls and the opt-out choices described in Start.io's policy. Older AdMob versions are subject to Google's advertising controls.
 
 ---
 
 ## Information We Do NOT Collect
 
 - The app does not provide its own account system and does not directly request your email address or phone number
-- We do not collect location data
+- The App does not request precise-location access; advertising providers may infer approximate location as described above
 - We do not record or transmit your browsing history to any server
 - We do not upload or share any files downloaded through the App
-- We do not sell any data to third parties
+- We do not sell your settings, browsing history, or downloaded files; advertising providers' sharing and sale practices and opt-out rights are described in their policies
 
 ---
 
 ## Data Retention
 
-All settings and session data are stored locally on your device. You can reset settings or clear all browser data (cookies, cache, and web storage) within the App at any time. Downloaded video files remain in the folder you chose until you delete them manually. Uninstalling the App removes all locally stored App data, but files you have already downloaded to external storage will remain.
+All settings and session data are stored locally on your device. You can reset settings or clear all browser data (cookies, cache, and web storage) within the App at any time. Downloaded video files remain in the folder you chose until you delete them manually. Uninstalling the App removes all locally stored App data, but files you have already downloaded to external storage will remain. Advertising-provider data retention and deletion rights are governed by the linked provider policies.
 
 ---
 
