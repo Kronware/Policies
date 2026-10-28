@@ -1,6 +1,6 @@
 # Privacy Policy - Simply Censor
 
-**Last updated: September 2026**
+**Last updated: October 27, 2026**
 
 This Privacy Policy explains how Simply Censor (the "App") handles information.
 
@@ -26,7 +26,11 @@ When you start video analysis or export, Simply Censor uses an Android foregroun
 
 ### Advertising
 
-The free version uses Google Mobile Ads SDK to display banner and interstitial ads. Google Mobile Ads SDK may collect and share IP address, app interactions, diagnostic information, and device or account identifiers for advertising, analytics, and fraud prevention. This SDK data is encrypted in transit. Simply Censor does not use selected media, face results, or censor settings for advertising.
+The free version uses the Start.io (formerly StartApp) SDK to display banner ads and interstitial ads before export. Start.io may collect advertising identifiers, IP address and approximate location inferred from it, device and network information, app and ad interactions, information about whether certain apps are installed, and SDK diagnostic or crash information. This data is used for advertising (including personalized advertising where permitted), measurement, analytics, security, and fraud prevention. Start.io may share advertising-related data with advertisers, advertising networks, attribution providers, and other business or data partners under its privacy policy. SDK diagnostics are collected for troubleshooting and are not shared with advertising partners according to Start.io's SDK disclosure.
+
+Simply Censor does not request location permission or provide precise GPS location to Start.io. Selected media, face results, masks, and censor settings are never supplied to the advertising SDK. Pro users do not see ads, and the App does not initialize the advertising SDK on launch when an existing Pro entitlement is recognized.
+
+Start.io's built-in privacy disclosure and consent flow remains enabled. You can also use Android's advertising ID controls to reset or delete your advertising ID. For details about Start.io's processing, retention, international transfers, and privacy rights, see the [Start.io End User Privacy Policy](https://www.start.io/policy/privacy-policy/). To opt out of sale or sharing, use [Start.io's privacy choices](https://www.start.io/do-not-sell-or-sharemy-personal-information/) or contact privacy@start.io. Purchasing Pro stops future ad placements; it does not automatically delete data previously collected by Start.io.
 
 ### Crash and application-not-responding diagnostics
 
@@ -34,7 +38,7 @@ When Firebase Crashlytics is configured for a released version, Simply Censor se
 
 ## Information We Do Not Collect
 
-- We do not collect names, email addresses, account information, or contacts.
+- The App does not request names, email addresses, account information, or contacts. Advertising-related SDK data is described above.
 - We do not upload photos, videos, audio, face data, or censor settings.
 - We do not use selected media, face data, or censor settings for advertising, analytics, or tracking.
 - We do not sell selected media, face data, or censor settings.
@@ -46,7 +50,7 @@ When Firebase Crashlytics is configured for a released version, Simply Censor se
 | Google ML Kit Face Detection | Finding faces for automatic censoring | No |
 | Google ML Kit Selfie Segmentation | Identifying foreground subjects for background censoring | No |
 | AndroidX Media3 | Video preview and local export processing | No |
-| Google Mobile Ads SDK | Banner and interstitial advertising | Yes, for advertising-related SDK data described above |
+| Start.io SDK | Banner and interstitial advertising | Yes, for advertising-related SDK data described above |
 | Firebase Crashlytics | Crash and application-not-responding diagnostics | Yes, for diagnostic reports described above |
 
 ## Permissions Used
@@ -55,12 +59,18 @@ When Firebase Crashlytics is configured for a released version, Simply Censor se
 | --- | --- |
 | `FOREGROUND_SERVICE` and `FOREGROUND_SERVICE_DATA_SYNC` | Keeping user-started video analysis and export visible and reliable with a persistent, cancellable notification while they run. |
 | `POST_NOTIFICATIONS` | Showing progress and completion notifications for user-started video processing. |
+| `INTERNET` and `ACCESS_NETWORK_STATE` | Loading ads, processing purchases, and sending configured crash diagnostics. |
+| `ACCESS_WIFI_STATE` | Network information used by the advertising SDK. |
+| `com.google.android.gms.permission.AD_ID` and `ACCESS_ADSERVICES_TOPICS` | Advertising identifiers and Android advertising topics where available. |
+| `RECEIVE_BOOT_COMPLETED` | Background scheduling support included by the advertising SDK; not media upload. |
 
 The App uses Android's system media picker rather than requesting broad access to your photo or video library.
 
 ## Data Retention and Deletion
 
 Session data is held locally only while you are editing. You can end a session by leaving the App, and you can remove any app data through Android Settings or by uninstalling the App. Exported photos and videos remain in your device gallery until you delete them.
+
+Advertising and diagnostic data already transmitted to Start.io or Firebase is governed by those providers' retention and deletion practices. Clearing local app data does not delete data held by those providers. Start.io privacy and deletion requests can be sent to privacy@start.io or dpo@start.io.
 
 ## Children's Privacy
 
