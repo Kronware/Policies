@@ -2,6 +2,12 @@
 
 ---
 
+## Version 1.0.68
+
+Camera scanning now recognizes retail and other standard barcodes as well as QR and Data Matrix codes. Scan results preserve the original barcode format.
+
+---
+
 ## Version 1.0.67
 
 QRScan is now ad-free for everyone. The Pro purchase option is hidden; all scanning and history features remain available.
