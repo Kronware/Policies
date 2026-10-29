@@ -2,6 +2,12 @@
 
 ---
 
+## Version 1.0.70
+
+Bug fixes and stability improvements.
+
+---
+
 ## Version 1.0.69
 
 Expanded camera and image scanning to recognize more barcode types, including GS1 DataBar and MaxiCode. Improved recognition of rotated and inverted barcodes, and preserved original formats when importing images.
