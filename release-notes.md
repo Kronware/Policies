@@ -2,6 +2,12 @@
 
 ---
 
+## Version 1.0.71
+
+Bug fixes and stability improvements.
+
+---
+
 ## Version 1.0.70
 
 Bug fixes and stability improvements.
