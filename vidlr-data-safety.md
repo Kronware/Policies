@@ -2,8 +2,11 @@
 
 This page supports the Google Play Data Safety declaration for the Vidlr app.
 
-Current builds use Start.io; older active releases use Google AdMob. Disclosures
-must cover all active releases, not just the latest Internal testing build.
+Builds can select Start.io or Unity LevelPlay with ironSource Ads; older active
+releases use Google AdMob. Disclosures must cover all active releases, not just
+the latest Internal testing build. Before distributing a LevelPlay build, verify
+the final SDK/network configuration against Unity's disclosure guidance and
+update the Play Console declaration; this document does not submit it.
 
 ---
 
@@ -15,6 +18,10 @@ must cover all active releases, not just the latest Internal testing build.
 | Browser cookies and cache | Stored on-device only | No | Web browsing session; clearable by user |
 | Clipboard URL (read once, immediately cleared) | Read transiently, not stored | No | Offer to open copied URLs in browser |
 | Downloaded video files | Saved to device storage chosen by you | No | App functionality |
+| Approximate location/IP address (LevelPlay/ironSource, free version only) | May be collected | Yes - to Unity/ironSource and advertising partners | Advertising, measurement, fraud prevention |
+| Device or other identifiers (LevelPlay/ironSource, where available) | May be collected | Yes - to Unity/ironSource and advertising partners | Advertising, measurement, fraud prevention |
+| App interactions (LevelPlay/ironSource ad views/clicks) | May be collected | Yes - to Unity/ironSource and advertising partners | Advertising, measurement |
+| Diagnostics (LevelPlay/ironSource technical logs) | May be collected | According to Unity's policy and SDK configuration | Service reliability, analytics, fraud prevention |
 | Approximate location/IP address (Start.io, free version only) | Yes | Yes - to Start.io and advertising partners | Advertising, measurement, fraud prevention |
 | Device or other identifiers (Start.io advertising ID, where available) | Yes | Yes - to Start.io and advertising/measurement partners | Advertising, measurement, fraud prevention |
 | App interactions (Start.io ad views/clicks, free version only) | Yes | Yes - to Start.io and advertising/measurement partners | Advertising, measurement |
@@ -37,6 +44,7 @@ must cover all active releases, not just the latest Internal testing build.
 - **Downloaded files** are saved directly to the folder you choose on your device and are not uploaded or shared by the app
 - **Advertising** is shown only in the free version. Current builds use Start.io with its built-in disclosure/consent feature enabled. See [Start.io's Privacy Policy](https://www.start.io/policy/privacy-policy/) and [Android SDK data disclosure](https://support.start.io/hc/en-us/articles/4413793394962-Google-Play-Safety-Section-Data-Disclosure). No precise-location or Bluetooth permissions are requested for advertising. Test-ad mode does not imply zero SDK data collection. Pro users see no ads.
 - **Older releases** use Google AdMob (Google Mobile Ads SDK), subject to [Google's Privacy Policy](https://policies.google.com/privacy). Keep the Google-specific categories below while those releases remain active.
+- **LevelPlay builds** initialize Unity LevelPlay/ironSource instead of Start.io, after free users allow or decline personalization in a one-time dialog. The choice is saved locally and passed through LevelPlay's GDPR consent API; **Settings > Privacy choices** lets users change it. Declining does not remove ads or guarantee zero SDK data processing. See [Unity's Game Player and App User Privacy Policy](https://unity.com/legal/game-player-and-app-user-privacy-policy). This manual consent flow is not a certified CMP; review additional regional requirements before a broad rollout. Start.io's built-in disclosure does not cover LevelPlay. Test-device settings are separate from consent and do not imply zero data collection.
 
 ### Google Mobile Ads SDK categories for older active releases
 
@@ -54,7 +62,8 @@ When ads are enabled (free version), the app's Play Data safety declaration incl
 
 | Permission | Why it is needed |
 |---|---|
-| `INTERNET` | Loading web pages in the built-in browser; detecting video stream URLs; loading advertisements via Start.io (AdMob in older releases) |
+| `INTERNET` | Loading web pages in the built-in browser; detecting video stream URLs; loading advertisements via Start.io or LevelPlay (AdMob in older releases) |
+| `com.google.android.gms.permission.AD_ID` | Advertising-ID access where available and permitted for the selected ad provider |
 | `ACCESS_NETWORK_STATE` | Checking network connectivity to enforce the Wi-Fi-only download setting |
 | `FOREGROUND_SERVICE` | Running the download service in the background so downloads continue while the app is not in focus |
 | `FOREGROUND_SERVICE_DATA_SYNC` | Required foreground service type for background file download operations |
@@ -71,7 +80,7 @@ When ads are enabled (free version), the app's Play Data safety declaration incl
 - **Clear browser data**: Cookies, cache, and web storage can be fully cleared from Settings
 - **Desktop mode**: Each browser tab can be switched between mobile and desktop user-agent independently
 - **Tab limit**: Free users can open up to 2 browser tabs; Pro users have no limit
-- **Ad personalisation**: Use Android's advertising-ID controls and [Start.io's opt-out rights](https://www.start.io/policy/privacy-policy/); older AdMob releases use Google's advertising controls
+- **Ad personalisation**: Use Android's advertising-ID controls and the selected provider's privacy choices: [Start.io](https://www.start.io/policy/privacy-policy/) or [Unity/ironSource](https://unity.com/legal/game-player-and-app-user-privacy-policy); older AdMob releases use Google's advertising controls
 
 ---
 

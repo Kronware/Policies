@@ -1,6 +1,6 @@
 # Privacy Policy — Vidlr
 
-**Last updated: October 27, 2026**
+**Last updated: October 28, 2026**
 
 This Privacy Policy explains how the Vidlr app ("the App") handles your information.
 
@@ -21,9 +21,15 @@ When the App comes into focus, it checks whether the clipboard contains a URL. I
 Videos you choose to download are saved to the folder you select on your device. The App does not upload, share, or transmit any downloaded content.
 
 ### Advertising
-The current free version of the App uses **Start.io** to display advertisements. Start.io may collect IP addresses, approximate location inferred from network information, advertising identifiers where available, device and network information, ad interactions, and SDK diagnostics/crash logs. Where available and permitted, it may query whether certain apps are installed. Advertising data may be shared with advertising and measurement partners as described in Start.io's policy. The App does not request precise-location or Bluetooth permissions for advertising. Pro users do not see ads.
+The free version of the App uses **Start.io** or **Unity LevelPlay with ironSource Ads**, depending on the installed build. Only the selected provider is initialized for advertising. Pro users do not see ads. The App does not request precise-location or Bluetooth permissions for advertising.
+
+Start.io may collect IP addresses, approximate location inferred from network information, advertising identifiers where available, device and network information, ad interactions, and SDK diagnostics/crash logs. Where available and permitted, it may query whether certain apps are installed. Advertising data may be shared with advertising and measurement partners as described in Start.io's policy.
 
 Start.io's built-in disclosure/consent feature remains enabled. Test-ad builds are not a guarantee that the SDK collects no data. See [Start.io's End User Privacy Policy](https://www.start.io/policy/privacy-policy/) for data processing, retention, consent, and opt-out rights.
+
+In LevelPlay builds, Unity/ironSource may collect device and advertising identifiers, IP addresses and approximate location inferred from them, device/network information, ad interactions, and technical logs for ad delivery, measurement, fraud prevention, and service reliability. Information may be shared with advertising, bidding, and service partners as described in [Unity's Game Player and App User Privacy Policy](https://unity.com/legal/game-player-and-app-user-privacy-policy). That policy explains retention, privacy choices, and access/deletion rights. Start.io's disclosure applies only to Start.io builds, not LevelPlay. Test ads do not imply zero SDK data collection.
+
+In current LevelPlay builds, free users are asked whether to allow personalized advertising before the advertising SDK initializes. The choice is saved locally and sent to LevelPlay using its GDPR consent API. You can allow or decline personalization and change your choice under **Settings > Privacy choices**. Declining personalization does not remove all advertising or guarantee zero SDK data processing; data may still be processed for ad delivery, security, and fraud prevention as described in the provider's policy. Pro users do not see this prompt or advertising. Start.io builds retain Start.io's own disclosure flow instead.
 
 Older versions of the App use **Google AdMob** (Google Mobile Ads SDK). Google indicates this SDK may collect and share data such as IP address, app interactions, diagnostic information, device identifiers, and account-linked identifiers for advertising, analytics, and fraud prevention. Depending on Google account state, this processing may include identifiers associated with personal info categories (such as email address or phone number) in Google's systems.
 
@@ -38,7 +44,7 @@ For more information, see:
 - [Google Privacy Policy](https://policies.google.com/privacy)
 - [How Google uses data when you use partners' apps](https://policies.google.com/technologies/partner-sites)
 
-To limit personalised advertising, use your device's advertising-ID controls and the opt-out choices described in Start.io's policy. Older AdMob versions are subject to Google's advertising controls.
+To limit personalised advertising, use your device's advertising-ID controls and the opt-out choices described in the selected provider's policy, including [Unity's privacy choices](https://unity.com/legal/game-player-and-app-user-privacy-policy) or [Start.io's policy](https://www.start.io/policy/privacy-policy/). Older AdMob versions are subject to Google's advertising controls.
 
 ---
 
