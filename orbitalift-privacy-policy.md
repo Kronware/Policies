@@ -1,6 +1,6 @@
 # Orbitalift Privacy Policy
 
-**Effective date: October 27, 2026**
+**Effective date: October 29, 2026**
 
 Orbitalift is an Android gravity and physics puzzle app developed by **Kronware**. This policy applies to Orbitalift, including the package **com.kronware.orbitalift**. For privacy questions or requests, email **[support@kronware.io](mailto:support@kronware.io)**.
 
@@ -12,24 +12,25 @@ Kronware does not operate a gameplay account, cloud-save service or server that 
 
 ## Advertising and consent
 
-The current Android app uses the **Start.io Android SDK** for optional rewarded videos and occasional between-arena interstitial ads. This replaces Google AdMob and Google's User Messaging Platform (UMP). Current builds, including signed Internal testing releases, enforce Start.io test mode using its official demo App ID. Test ads do not generate advertising revenue, but test mode does not guarantee that the SDK processes no data. Older app versions may still use Google's advertising services under the prior policy.
+New Android builds use **Unity LevelPlay** for optional rewarded videos and occasional between-arena interstitial ads. LevelPlay replaces the direct Start.io integration and the earlier Google AdMob integration. LevelPlay SDK 9.5.0 also includes Unity Ad Quality for advertising-quality measurement. Serving is enabled with Orbitalift's app and ad-unit IDs; debug and Internal testing builds are not automatically limited to test ads. Older installed versions may still use Start.io or Google's advertising services under the prior policies.
 
-Start.io describes processing information for advertising, measurement, diagnostics and fraud prevention. Depending on permissions, device settings, consent and SDK behavior, this may include:
+Unity and advertising partners describe processing information for advertising, measurement, ad quality, diagnostics and fraud prevention. Depending on configured networks, permissions, device settings, consent and SDK behavior, this may include:
 
 - IP address, which can be used to estimate a device's approximate location.
 - App and ad interactions, such as launches, taps and video views.
 - SDK diagnostic, crash and performance information.
-- Device identifiers, including the Android advertising ID where available, and device/OS, network and language information. Start.io also discloses installed-app queries where applicable.
+- Device identifiers, including the Android advertising ID where available, and device/OS, network and language information.
 
-This integration does not request precise-location or Bluetooth access for advertising or supply your gamer identity, scores or journey save to Start.io. An approximate location may still be inferred from your IP address. Start.io's own processing, sharing, retention and international transfers are governed by its policies and your applicable choices. Non-personalized ads do not necessarily mean that no information is processed.
+This integration does not request precise-location or Bluetooth access for advertising or supply your gamer identity, scores or journey save to LevelPlay. An approximate location may still be inferred from your IP address. Unity's and participating advertising networks' processing, sharing, retention and international transfers are governed by their policies and your applicable choices. Non-personalized ads and test ads do not necessarily mean that no information is processed.
 
-Before initializing Start.io, the app asks whether to allow personal data to be used for personalized ads and passes your choice to the SDK. Declining personalization does not prevent local gameplay or promise that essential ad processing stops. An **Ad privacy options** entry in Pause lets you change this preference. Start.io may also present its own applicable consent message. Your choice does not guarantee that an ad will be available.
+Before initializing LevelPlay, the app asks whether to allow personal data to be used for personalized ads and passes your choice to the SDK. It asks for a fresh choice rather than reusing Start.io's saved preference. Declining sets LevelPlay consent to false and its do-not-sell metadata to true. This does not prevent local gameplay or promise that essential ad processing stops. An **Ad privacy options** entry in Pause lets you change this preference; cached ads are discarded when it changes. This preference dialog does not replace any additional legally required regional consent process. Your choice does not guarantee that an ad will be available.
 
-For Start.io's disclosures, privacy rights and opt-out or deletion requests, see:
+For Unity's disclosures, privacy rights and opt-out or deletion requests, see:
 
-- [Start.io End User Privacy Policy](https://www.start.io/policy/privacy-policy/)
-- [Start.io Android SDK data disclosures](https://support.start.io/hc/en-us/articles/4413793394962-Google-Play-Safety-Section-Data-Disclosure)
-- [Start.io opt-out choices](https://www.start.io/do-not-sell-or-sharemy-personal-information/)
+- [Unity Game Player and App User Privacy Policy](https://unity.com/legal/game-player-and-app-user-privacy-policy)
+- [Unity Privacy Policy Hub](https://unity.com/legal/privacy-policy)
+- [Unity Do Not Sell or Share My Personal Information](https://unity.com/legal/do-not-sell-my-personal-information)
+- [Start.io End User Privacy Policy](https://www.start.io/policy/privacy-policy/), for older app versions and prior processing.
 - [Google Privacy Policy](https://policies.google.com/privacy), applicable to Google services below and older app versions using AdMob.
 
 Orbitalift does not separately integrate Firebase Analytics, a Facebook SDK or a developer-operated analytics backend. Optional crash reporting is described below. Advertising SDK measurement and diagnostics still apply as described above.
@@ -58,7 +59,7 @@ The most recent share image is kept in the app's private storage and replaced wh
 
 Local progress, settings, backup saves and the latest share image remain on the device until replaced or removed. Android's app-storage controls can remove local app data; uninstalling ordinarily removes the app's private data, although platform backups may remain. Removing app data also removes your saved progress, XP, inventory and settings. Orbitalift does not provide a cloud account from which Kronware can recover that progress.
 
-Deleting local app data does not delete information already processed by Google, Start.io, advertising partners or a sharing destination. Orbitalift does not currently provide an in-app mechanism to delete those providers' records. Their retention periods and privacy-request processes apply. You can use Android's advertising privacy controls to reset or delete your advertising ID where supported; this does not stop all advertising or SDK processing.
+Deleting local app data does not delete information already processed by Unity, Google, Start.io, advertising partners or a sharing destination. Orbitalift does not currently provide an in-app mechanism to delete those providers' records. Their retention periods and privacy-request processes apply. You can use Android's advertising privacy controls to reset or delete your advertising ID where supported; this does not stop all advertising or SDK processing.
 
 You may have rights to access, correct, delete, restrict or object to processing, withdraw consent, or make a complaint to a privacy regulator, depending on your jurisdiction. Contact **support@kronware.io** with requests about Kronware's handling of your information. We may need information to understand or verify a request. If you email us, we receive your email address and the information you choose to include, and use them to respond and handle the request. Do not include passwords or other sensitive information unnecessarily. Requests concerning a provider's independent processing may need to be directed to that provider.
 
