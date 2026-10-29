@@ -2,6 +2,12 @@
 
 ---
 
+## Version 1.0.69
+
+Expanded camera and image scanning to recognize more barcode types, including GS1 DataBar and MaxiCode. Improved recognition of rotated and inverted barcodes, and preserved original formats when importing images.
+
+---
+
 ## Version 1.0.68
 
 Camera scanning now recognizes retail and other standard barcodes as well as QR and Data Matrix codes. Scan results preserve the original barcode format.
