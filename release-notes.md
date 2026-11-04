@@ -1,156 +1,65 @@
-# QRScan — Release Notes
-
----
-
-## Version 1.0.72
-
-Added Terms of Service and updated policy information.
-
----
-
-## Version 1.0.71
-
-Bug fixes and stability improvements.
-
----
-
-## Version 1.0.70
-
-Bug fixes and stability improvements.
-
----
-
-## Version 1.0.69
-
-Expanded camera and image scanning to recognize more barcode types, including GS1 DataBar and MaxiCode. Improved recognition of rotated and inverted barcodes, and preserved original formats when importing images.
-
----
-
-## Version 1.0.68
-
-Camera scanning now recognizes retail and other standard barcodes as well as QR and Data Matrix codes. Scan results preserve the original barcode format.
-
----
-
-## Version 1.0.67
-
-QRScan is now ad-free for everyone. The Pro purchase option is hidden; all scanning and history features remain available.
-
----
-
-## Version 1.0.65
-
-Scanned QR codes with app-specific links (WhatsApp, Telegram, and similar) are now recognized and can be opened directly, not just standard web addresses. Added a friendly message if no app is available to handle a link.
-
----
-
-## Version 1.0.62
-
-Ads now load noticeably faster and are prepared in advance, so they appear right away when moving between scanning and results. Also includes improved crash reporting, general stability fixes and updated internal components.
-
----
-
-## Version 1.0.57
-
-Fixed an issue where ads were not displaying on the scanner screen until navigating to another page. Ads now load reliably on app launch with automatic retry on failure.
-
----
-
-## Version 1.0.55
-
-Added workspace settings to keep trusted Copilot tool behavior consistent across development machines.
-
----
-
-## Version 1.0.53
-
-Improved Data Matrix scanning and fixed scan results so detected codes keep their original format instead of being converted to QR.
-
----
-
-## Version 1.0.52
-
-Expanded policy disclosures for data handling safeguards and transfer transparency.
-
----
-
-## Version 1.0.51
-
-Bug fixes and stability improvements.
-
----
-
-## Version 1.0.50
-
-Updated Google Play Billing support to meet latest Google Play requirements.
-
----
-
-## Version 1.0.49
-
-Bug fixes and compatibility improvements for newer Android requirements.
-
----
-
-## Version 1.0.48
-
-Improved ad responsiveness by preloading ad banners at app startup for faster display on screens with ads.
-
----
-
-## Version 1.0.45
-
-Updated Google Play Billing Library for continued compatibility with Google Play requirements.
-
----
-
-## Version 1.0.43
-
-Bug fixes and stability improvements.
-
----
-
-## Version 1.0.40
-
-Bug fixes and compatibility improvements for Android 15.
-
----
-
-## Version 1.0.37
-
-Bug fixes and stability improvements.
-
----
-
-## Version 1.0.36
-
-- Added Go Pro screen with a list of Pro benefits and an upgrade button
-- Go Pro option now appears in the navigation menu (hidden once you've upgraded)
-
----
-
-## Version 1.0.34
-
-Bug fixes and stability improvements.
+# PDF Document Scanner — Release Notes
 
 ---
 
 ## Version 1.0.33
 
-Bug fixes and compatibility improvements for Android 16.
+Added Terms of Service explaining app usage, document ownership, and your rights and responsibilities.
 
----
+## Version 1.0.32
+
+Enjoy ad-free scanning and PDF exports for all users.
 
 ## Version 1.0.29
 
-Updated for Android 15. Ad support improvements.
+Bug fixes and stability improvements.
 
----
 
-## Version 1.0.25 — Initial Release
+## Version 1.0.27
 
-- QR code and barcode scanning via camera
-- Scan from image in your gallery
-- Camera zoom controls
-- Scan history with timestamps
-- Pro mode (removes ads)
+Improved screen layout on devices with on-screen navigation controls.
+
+
+## Version 1.0.26
+
+Bug fixes and stability improvements
+
+
+## Version 1.0.25
+
+Bug fixes and stability improvements.
+
+## Version 1.0.24
+
+Bug fixes and stability improvements
+
+
+## Version 1.0.23
+
+Bug fixes and stability improvements.
+
+
+## Version 1.0.22
+
+Bug fixes and stability improvements.
+
+
+## Version 1.0.20
+
+Pro features are now clearly marked in the export quality selector. Tapping a locked option opens the upgrade screen.
+
+
+## Version 1.0.19
+
+Initial release.
+
+
+## Version 1.0.17
+
+Bug fixes and stability improvements.
+
+## Version 1.0.16
+
+- Export quality setting is now remembered between sessions
+- Added pinch-to-zoom on document preview
+- Bug fixes and stability improvements
