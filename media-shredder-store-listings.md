@@ -1,6 +1,6 @@
 # Media Shredder — Store Listing Copy
 
-**Last Updated:** July 30, 2026
+**Last Updated:** August 14, 2026
 
 ---
 
@@ -22,6 +22,7 @@ Media Shredder permanently destroys photos and videos by overwriting the raw fil
 A standard delete simply removes the directory entry; the underlying bytes remain on disk and are recoverable with basic tools. Media Shredder writes over every byte of each file — three times — then removes it from the file system.
 
 HOW IT WORKS
+
 Media Shredder uses Android's MediaStore API to access your selected files and perform secure in-place overwriting via the ContentResolver. No special system permissions beyond standard media access are required.
 
 FEATURES
@@ -32,8 +33,8 @@ Each file is overwritten with random data, its bitwise complement, then a second
 📂 Media Browser
 Browse all photos and videos on your device in a clean grid or list view. Filter by photos or videos, sort by date, name, or size, and multi-select files for batch shredding.
 
-⏰ Scheduled Auto Shredding (Pro)
-Set up automated shred schedules for any folder on your device. Choose specific days of the week and a time of day — Media Shredder will wake up and securely destroy the contents at exactly the right time, even overnight. Each rule runs independently so you can manage multiple folders on different schedules.
+⏰ Scheduled Auto Shredding — 1 Free Schedule Included
+Set up automated shred schedules for any folder on your device. Choose specific days of the week and a time of day — Media Shredder will wake up and securely destroy the contents at exactly the right time, even overnight. Your first schedule is completely free. Upgrade to Pro to create unlimited independent schedules across multiple folders.
 
 🗑️ Recently Deleted (Pro)
 Access and securely shred items currently sitting in your device's recycle bin before they are permanently erased by the system. Preview thumbnails of pending items and shred them all with one tap.
@@ -42,10 +43,13 @@ Access and securely shred items currently sitting in your device's recycle bin b
 Fine-tune Media Shredder to fit your workflow. Control companion artifact shredding (thumbnails, sidecar files), configure notification preferences, and manage app behaviour from a dedicated settings page.
 
 ⭐ Pro — No Ads + Full Feature Access
-Upgrade once to remove all advertisements permanently and unlock the full feature set — including scheduled auto-shredding, recently deleted shredding with live thumbnail preview, and priority support.
+Upgrade once to remove all advertisements permanently and unlock the full feature set — including unlimited auto-shred schedules, recently deleted shredding with live thumbnail preview, and priority support.
 
 📊 Live Progress
 Watch real-time progress as each file is shredded, with a per-file activity log so you know exactly what was destroyed.
+
+🌍 Multi-Language Support
+Media Shredder is fully localised for a growing list of languages, so you can use it comfortably in your native tongue.
 
 WHO IS THIS FOR?
 Anyone who values privacy and wants confidence that deleted media cannot be easily recovered — whether selling a device, disposing of sensitive content, running automated folder cleanup, or simply staying private.
