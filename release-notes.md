@@ -2,6 +2,12 @@
 
 ---
 
+## Version 1.0.72
+
+Added Terms of Service and updated policy information.
+
+---
+
 ## Version 1.0.71
 
 Bug fixes and stability improvements.
