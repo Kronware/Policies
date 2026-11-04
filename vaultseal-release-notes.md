@@ -2,6 +2,23 @@
 
 ---
 
+## Version 1.0.278
+
+- Added Android nonfatal reporting for selected vault setup, backup, background import, decryption, and export failures.
+- Sanitized handled-error reports to exclude original messages, causes, and suppressed exceptions; normal coroutine cancellation is not reported.
+- Verified Android debug and release builds, release mapping uploads, and focused reporting tests.
+- Repackaged Linux and Windows companions with the matching release version; no PC behavior changes.
+
+---
+
+## Version 1.0.274
+
+- Added read-only previews for text files on Android, including TXT, JSON, and other supported text formats.
+- Added text selection and copying in Android and PC previews without allowing editing.
+- Added a draggable PC preview scrollbar that appears when text overflows the viewer.
+
+---
+
 ## Version 1.0.138
 
 - Added on-demand thumbnail generation for fast, responsive media browsing.

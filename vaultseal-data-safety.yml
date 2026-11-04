@@ -14,6 +14,11 @@ overview:
   encryption_at_rest: true
   user_can_request_deletion: true
   offline_first: true
+  lan_sync:
+    enabled: true
+    transport: Direct encrypted peer-to-peer local network only
+    cloud_or_developer_server: false
+    user_authorized_pairing: Six-digit PIN confirmation is required
 
 data_types_collected:
   user_content:
@@ -21,7 +26,14 @@ data_types_collected:
     audio_files: false
     files_docs: false
     clipboard_content: false
-    notes: Storage is strictly local and encrypted on-device; never transmitted to developer servers.
+    notes: Storage is strictly local and encrypted on-device. Optional LAN sync can transfer encrypted content directly to an authorized local peer; it is never transmitted to developer servers.
+  lan_sync_peer_data:
+    device_name: Exchanged only with the authorized local peer
+    local_network_address: Exchanged only with the authorized local peer
+    certificate_fingerprint: Exchanged only with the authorized local peer
+    encrypted_vault_manifests: Exchanged only with the authorized local peer
+    encrypted_item_payloads: Exchanged only with the authorized local peer
+    shared_with_third_parties: false
   personal_identifiers:
     name: false
     email: false

@@ -12,7 +12,7 @@
 - **Encryption in Transit:** Yes
 - **Encryption at Rest:** Yes (AES-256-GCM local cryptographic container)
 - **User Can Request Data Deletion:** Yes (Local deletion removes files and cryptographic keys permanently)
-- **Offline-First:** Yes
+- **Offline-First:** Yes. Optional LAN sync uses direct, user-authorized local-network connections only.
 
 ---
 
@@ -21,7 +21,13 @@
 ### User Content (Photos, Videos, Audio, Files, Docs, Notes, Clipboard)
 - **Collected:** No
 - **Shared:** No
-- **Details:** All user content is encrypted and stored strictly on-device or in user-designated local storage via Android Storage Access Framework (SAF). Zero-knowledge design ensures no user content is ever transmitted to developer servers.
+- **Details:** All user content is encrypted and stored strictly on-device or in user-designated local storage via Android Storage Access Framework (SAF). Optional LAN sync can transfer encrypted manifests and encrypted item payloads directly to a paired VaultSeal peer on the same local network. No user content is transmitted to developer servers.
+
+### Local Network Sync
+- **Purpose:** Explicitly authorized peer-to-peer synchronization with VaultSeal PC or another paired companion device.
+- **Network data:** Device name, local network address, certificate fingerprint, encrypted vault manifests, and encrypted item payloads may be exchanged between paired devices.
+- **Authorization:** Pairing requires user confirmation of a six-digit PIN. Trusted peers are stored locally and can be removed by the user.
+- **Third parties:** No Kronware relay, cloud storage, analytics service, or other third party receives LAN sync data.
 
 ### Personal Identifiers (Name, Email, User ID, Phone Number, Address)
 - **Collected:** No

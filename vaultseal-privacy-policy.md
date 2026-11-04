@@ -11,7 +11,7 @@ VaultSeal ("we", "our", or "us") is dedicated to protecting user privacy and ens
 ## 1. Core Principle: Zero-Knowledge & Offline-First
 
 VaultSeal is an offline-first, local encrypted vault application for Android. 
-- **No Cloud Sync:** Your encrypted vaults, media, documents, and notes are stored strictly on your device or in user-designated local storage via Android Storage Access Framework (SAF).
+- **No Cloud Sync:** Your encrypted vaults, media, documents, and notes are stored strictly on your device or in user-designated local storage via Android Storage Access Framework (SAF). VaultSeal does support optional, user-authorized peer-to-peer LAN sync with a paired VaultSeal PC or companion device; this uses the local network only and does not route data through Kronware or a cloud service.
 - **No Accounts or Logins:** You do not need to register an account, provide an email address, or create a remote identity to use VaultSeal.
 - **Zero-Knowledge Encryption:** All content is encrypted client-side using industry-standard AES-256-GCM cryptography. We do not have access to your passphrases, master encryption keys, or decrypted data.
 
@@ -30,7 +30,8 @@ VaultSeal is an offline-first, local encrypted vault application for Android.
 
 ### C. Android Device Permissions
 To provide secure vault storage, encryption, and import capabilities, VaultSeal may request the following permissions:
-- **Photos & Media (`READ_MEDIA_IMAGES`, `READ_MEDIA_VIDEO`, `READ_MEDIA_AUDIO`, `READ_EXTERNAL_STORAGE`):** Required exclusively when you choose to browse, select, and import photos, videos, and audio files from your device into your encrypted vault. VaultSeal only accesses files you explicitly choose to import. These files are encrypted locally and never transmitted across the network.
+- **Photos & Media (`READ_MEDIA_IMAGES`, `READ_MEDIA_VIDEO`, `READ_MEDIA_AUDIO`, `READ_EXTERNAL_STORAGE`):** Required exclusively when you choose to browse, select, and import photos, videos, and audio files from your device into your encrypted vault. VaultSeal only accesses files you explicitly choose to import. These files are encrypted locally and are not sent to developer servers. If you explicitly enable LAN sync, encrypted vault items may be transferred to a paired local peer.
+- **Local Network Sync:** When you enable LAN sync, VaultSeal discovers nearby VaultSeal peers on the local network and may exchange device names, local network addresses, certificate fingerprints, encrypted vault manifests, and encrypted item payloads with a peer you authorize. Pairing requires an explicit six-digit PIN confirmation. This data is exchanged directly between the paired devices and is not sent to Kronware servers.
 - **Camera (`CAMERA`):** Required only if you use the optional in-app secure camera to capture photos or videos directly into encrypted vault storage.
 - **Notifications & Background Processing (`POST_NOTIFICATIONS`, `FOREGROUND_SERVICE_DATA_SYNC`):** Used to display real-time progress notifications when importing or encrypting large files and containers in the background.
 
@@ -45,7 +46,7 @@ To provide secure vault storage, encryption, and import capabilities, VaultSeal 
 
 ## 3. Data Sharing and Third Parties
 
-We do not sell, rent, trade, or share your personal data with third parties. Content never leaves your device unless you explicitly initiate an export or share action to an external app through the Android system share sheet.
+We do not sell, rent, trade, or share your personal data with third parties. Content never leaves your device unless you explicitly initiate an export/share action or authorize LAN sync with a paired local peer. LAN sync is direct device-to-device communication and does not use a Kronware relay or cloud service.
 
 ---
 
