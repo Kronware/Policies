@@ -1,7 +1,8 @@
 # Terms of Service for VaultSeal
 
 **Effective Date:** August 30, 2026  
-**Last Updated:** November 4, 2026  
+**Last Updated:** November 4, 2026
+
 **Publisher:** Kronware (kronware.io)
 
 These Terms of Service ("Terms") govern your use of the VaultSeal Android application and VaultSeal desktop companion software (together, the "App"), published by Kronware ("Kronware", "we", or "us"). By downloading, installing, or using the App, you agree to these Terms. If you do not agree, do not use the App. You must have the legal capacity to enter into these Terms, or use the App with the consent and supervision of a parent or legal guardian where required by applicable law.
@@ -53,7 +54,7 @@ The App's code, design, graphics, branding, and logos are owned by Kronware or i
 
 ## 5. Privacy, Advertising, and Third Parties
 
-Our [Privacy Policy](https://kronware.github.io/Policies/vaultseal-privacy-policy) explains how the App handles information, including local vault storage, optional LAN sync, advertising, and billing. The free Android version may display advertising provided by Google AdMob; the Pro version removes in-app advertising. Third-party stores, advertising providers, and services you choose to use have their own applicable terms and privacy policies. Your vault content is not licensed to Kronware for advertising by these Terms.
+Our [Privacy Policy](https://kronware.github.io/Policies/vaultseal-privacy-policy) explains how the App handles information, including local vault storage, optional LAN sync, and billing. Advertising is currently disabled for all users; optional Pro purchases remain available. Third-party stores and services you choose to use have their own applicable terms and privacy policies. Your vault content is not licensed to Kronware for advertising by these Terms.
 
 ---
 
