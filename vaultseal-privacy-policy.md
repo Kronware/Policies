@@ -1,7 +1,7 @@
 # Privacy Policy for VaultSeal
 
 **Effective Date:** August 30, 2026  
-**Last Updated:** September 4, 2026  
+**Last Updated:** November 5, 2026  
 **Publisher:** Kronware (kronware.io)
 
 VaultSeal ("we", "our", or "us") is dedicated to protecting user privacy and ensuring full control over personal data. This Privacy Policy explains how VaultSeal handles information.
@@ -30,7 +30,7 @@ VaultSeal is an offline-first, local encrypted vault application for Android.
 
 ### C. Android Device Permissions
 To provide secure vault storage, encryption, and import capabilities, VaultSeal may request the following permissions:
-- **Photos & Media (`READ_MEDIA_IMAGES`, `READ_MEDIA_VIDEO`, `READ_MEDIA_AUDIO`, `READ_EXTERNAL_STORAGE`):** Required exclusively when you choose to browse, select, and import photos, videos, and audio files from your device into your encrypted vault. VaultSeal only accesses files you explicitly choose to import. These files are encrypted locally and are not sent to developer servers. If you explicitly enable LAN sync, encrypted vault items may be transferred to a paired local peer.
+- **Photos, Media & Files (no broad media or storage permission):** VaultSeal does not request permission to read your photo, video, audio, or file library. Items are imported only when you select them with the Android system file picker or share them to VaultSeal from another app, which grants access solely to the items you choose. Vault and backup folders are accessed only through locations you select via the Android Storage Access Framework. Imported files are encrypted locally and are not sent to developer servers. If you explicitly enable LAN sync, encrypted vault items may be transferred to a paired local peer.
 - **Local Network Sync:** When you enable LAN sync, VaultSeal discovers nearby VaultSeal peers on the local network and may exchange device names, local network addresses, certificate fingerprints, encrypted vault manifests, and encrypted item payloads with a peer you authorize. Pairing requires an explicit six-digit PIN confirmation. This data is exchanged directly between the paired devices and is not sent to Kronware servers.
 - **Camera (`CAMERA`):** Required only if you use the optional in-app secure camera to capture photos or videos directly into encrypted vault storage.
 - **Notifications & Background Processing (`POST_NOTIFICATIONS`, `FOREGROUND_SERVICE_DATA_SYNC`):** Used to display real-time progress notifications when importing or encrypting large files and containers in the background.
