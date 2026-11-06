@@ -1,6 +1,6 @@
 # Orbitalift Privacy Policy
 
-**Effective date: October 29, 2026**
+**Effective date: November 6, 2026**
 
 Orbitalift is an Android gravity and physics puzzle app developed by **Kronware**. This policy applies to Orbitalift, including the package **com.kronware.orbitalift**. For privacy questions or requests, email **[support@kronware.io](mailto:support@kronware.io)**.
 
@@ -8,7 +8,7 @@ Orbitalift is an Android gravity and physics puzzle app developed by **Kronware*
 
 Orbitalift stores your progress on your device, including XP, level progression, saved arenas, inventory, prizes, unlocked themes, reward-meter charge, scores, difficulty, daily challenge attempts and results, pending account-bound score submissions, the date of a daily sharing bonus, and sound, display and gameplay preferences. The app also keeps a local backup of its save file to recover from a damaged save.
 
-Kronware does not operate a gameplay account, cloud-save service or server that receives these saves. Orbitalift does not require an account, and it does not directly ask for your name, email address, contacts, photos, precise location or payment details. Device or platform backup features may separately retain app data according to your settings and their providers' policies.
+Kronware does not operate a gameplay account, cloud-save service or server that receives these saves. Orbitalift does not require an account, and it does not directly ask for your name, email address, contacts, photos, precise location or payment details. Android Auto Backup may copy the journey save file to your Google account backup according to your device settings, so progress can return after reinstalling or moving to a new phone. If you sign in to Google Play Games, the app also stores a copy of your journey save in Play Games Saved Games for your player account (see below).
 
 ## Advertising and consent
 
@@ -33,11 +33,11 @@ For Unity's disclosures, privacy rights and opt-out or deletion requests, see:
 - [Start.io End User Privacy Policy](https://www.start.io/policy/privacy-policy/), for older app versions and prior processing.
 - [Google Privacy Policy](https://policies.google.com/privacy), applicable to Google services below and older app versions using AdMob.
 
-Orbitalift does not separately integrate Firebase Analytics, a Facebook SDK or a developer-operated analytics backend. Optional crash reporting is described below. Advertising SDK measurement and diagnostics still apply as described above.
+Orbitalift does not separately integrate Firebase Analytics, a Facebook SDK or a developer-operated analytics backend. Crash reporting is described below. Advertising SDK measurement and diagnostics still apply as described above.
 
-## Optional crash and ANR diagnostics
+## Crash and ANR diagnostics
 
-Android builds with Firebase configured include Google Firebase Crashlytics and its native-crash SDK. Crash-report collection is off by default and can be enabled or disabled with **Crash reports** in Settings. When enabled, the SDK sends crash, nonfatal-error and supported Android application-not-responding (ANR) reports to Google for diagnosing reliability problems. Reports may include stack traces, app version and build identifiers, device/OS information, timestamps, installation identifiers and limited game-state context such as mode, difficulty and recent operations.
+Android builds with Firebase configured include Google Firebase Crashlytics and its native-crash SDK. Crash reporting is on by default and can be turned off at any time with **Crash reports** in Settings. While on, the SDK sends crash, nonfatal-error and supported Android application-not-responding (ANR) reports to Google for diagnosing reliability problems. Reports may include stack traces, app version and build identifiers, device/OS information, timestamps, installation identifiers and limited game-state context such as mode, difficulty and recent operations.
 
 Our custom diagnostic context does not include saved-game contents, gamer names, email, Play Games player IDs, advertising IDs, credentials or arbitrary user text. On Android 11 and later, enabled diagnostics also inspect recent abnormal process exits on the next launch. When available, a bounded system trace is kept privately on the device, not automatically attached to the synthetic Firebase report. The latest trace is replaced by later captures and cleaned when enabled diagnostics next run after it is more than seven days old.
 
@@ -45,9 +45,9 @@ Disabling Crash reports stops our diagnostic reporting and asks Crashlytics to d
 
 ## Optional Google Play Games
 
-Builds configured for Google Play Games support optional authentication, leaderboards and achievements. Local journey play does not require sign-in. Google manages the gamer name, avatar and player identifier. The app reads the profile and player identifier for displaying the connected player and keeping score submissions attached to the correct account; it does not ask for a separate real name, email or leaderboard nickname.
+Builds configured for Google Play Games support optional authentication, leaderboards, achievements and Saved Games. Local journey play does not require sign-in. Google manages the gamer name, avatar and player identifier. The app reads the profile and player identifier for displaying the connected player and keeping score submissions attached to the correct account; it does not ask for a separate real name, email or leaderboard nickname.
 
-Publishing an eligible daily score sends the score and challenge identifier to Google Play Games. Leaderboards can display gamer identity and rank to other players according to Google's service and privacy settings. Pending submissions and their owning player identifier are stored locally for retry; switching accounts does not transfer those submissions. These features are unavailable where the build has no corresponding service/board configuration. They do not synchronize journey saves or access Facebook friends. Profile editing uses Google's official profile surface, governed by [Google's Privacy Policy](https://policies.google.com/privacy).
+Publishing an eligible daily score sends the score and challenge identifier to Google Play Games. Leaderboards can display gamer identity and rank to other players according to Google's service and privacy settings. Pending submissions and their owning player identifier are stored locally for retry; switching accounts does not transfer those submissions. These features are unavailable where the build has no corresponding service/board configuration. While you are signed in, the app uploads your journey save (progress, inventory, settings, scores and daily records) to Play Games Saved Games and can offer to restore it on another device; Google stores it under your player account according to its policies. They do not access Facebook friends. Profile editing uses Google's official profile surface, governed by [Google's Privacy Policy](https://policies.google.com/privacy).
 
 ## Sharing your progress
 
@@ -57,7 +57,7 @@ The most recent share image is kept in the app's private storage and replaced wh
 
 ## Retention, deletion and your choices
 
-Local progress, settings, backup saves and the latest share image remain on the device until replaced or removed. Android's app-storage controls can remove local app data; uninstalling ordinarily removes the app's private data, although platform backups may remain. Removing app data also removes your saved progress, XP, inventory and settings. Orbitalift does not provide a cloud account from which Kronware can recover that progress.
+Local progress, settings, backup saves and the latest share image remain on the device until replaced or removed. Android's app-storage controls can remove local app data; uninstalling ordinarily removes the app's private data, although Android backups and Play Games Saved Games copies may remain. Removing app data also removes your local progress, XP, inventory and settings. Kronware cannot recover progress itself; a Google account backup or Play Games cloud save, where available, can.
 
 Deleting local app data does not delete information already processed by Unity, Google, Start.io, advertising partners or a sharing destination. Orbitalift does not currently provide an in-app mechanism to delete those providers' records. Their retention periods and privacy-request processes apply. You can use Android's advertising privacy controls to reset or delete your advertising ID where supported; this does not stop all advertising or SDK processing.
 
