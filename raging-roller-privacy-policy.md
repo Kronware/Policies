@@ -1,6 +1,6 @@
 # Privacy Policy — Raging Roller
 
-**Last updated: November 8, 2026**
+**Last updated: November 9, 2026**
 
 This Privacy Policy explains how the Raging Roller game ("the App"), provided by
 Kronware ("we", "us", or "our"), handles your information.
@@ -37,6 +37,15 @@ this data as described in the
 [Firebase Privacy and Security information](https://firebase.google.com/support/privacy)
 and keeps Crashlytics crash data for 90 days.
 
+### Google Play Games leaderboards (optional)
+If you sign in to **Google Play Games**, the App sends your run scores to the
+Raging Roller High Score leaderboard. The App shows your Play Games display name
+on the High Scores screen but doesn't store it or send it anywhere. Google
+processes your Play Games profile and scores under the
+[Google Privacy Policy](https://policies.google.com/privacy). Your Play Games
+profile visibility settings control who can see your scores. You can play
+without signing in.
+
 ### Advertising
 The App shows advertisements through **Unity LevelPlay with ironSource Ads**,
 which mediates advertising networks. Unity/ironSource and its advertising
@@ -62,8 +71,9 @@ described in Unity's policy.
 
 ## Information We Do NOT Collect
 
-- The App has no account system and doesn't ask for your name, email address, or
-  phone number.
+- The App has no account system of its own and doesn't ask for your name, email
+  address, or phone number. Optional Google Play Games sign-in is handled by
+  Google.
 - The App doesn't request precise location. Advertising providers may infer an
   approximate location, as described above.
 - The App doesn't use the camera, microphone, contacts, or your files. Motion
@@ -77,8 +87,15 @@ described in Unity's policy.
 
 Game progress and settings stay on your device until you uninstall the App or
 clear its storage in Android settings. Crashlytics keeps crash data for 90 days.
-Data retention and deletion by the advertising provider are governed by its
-linked policy.
+
+Kronware has no accounts or servers, so we don't hold your data and can't delete
+data held by Google or Unity:
+- **Leaderboard scores and your Play Games profile** are managed in your Google
+  account (**Play Games app > Settings**).
+- **Crashlytics data** is held by Google and processed under
+  [Firebase's privacy terms](https://firebase.google.com/support/privacy).
+- **Advertising data** retention and deletion are governed by
+  [Unity's policy](https://unity.com/legal/game-player-and-app-user-privacy-policy).
 
 ---
 

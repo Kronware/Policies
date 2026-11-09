@@ -24,19 +24,23 @@ This document does not submit the declaration for you.
 | Device or other identifiers: advertising ID, app set ID (LevelPlay/ironSource) | May be collected | Yes - to Unity/ironSource and advertising partners | Advertising, measurement, fraud prevention |
 | App interactions: ad views and clicks (LevelPlay/ironSource) | May be collected | Yes - to Unity/ironSource and advertising partners | Advertising, measurement |
 | Diagnostics: technical logs (LevelPlay/ironSource) | May be collected | According to Unity's policy and SDK configuration | Service reliability, analytics, fraud prevention |
+| App activity: other actions (run scores sent to the Google Play Games leaderboard) | Yes, only when signed in to Play Games | No (Google provides the service) | App functionality |
+| Play Games display name | Shown on-device only, not stored or sent by the App | No | App functionality |
 
 ### Play Console answers (summary)
 
 - **Does the app collect or share user data?** Yes.
 - **Is all collected data encrypted in transit?** Yes. Crashlytics and LevelPlay
   use HTTPS.
-- **Can users request data deletion?** No account exists. Local data is deleted
-  by uninstalling the App or clearing its storage. Deletion of advertising and
-  Crashlytics data is handled through the providers' policies.
+- **Can users request data deletion?** No. Kronware has no accounts or servers
+  and can't delete data held by Google or Unity. Local data is deleted by
+  uninstalling the App or clearing its storage. Advertising data, Crashlytics
+  data, and Play Games scores and profiles are managed through each provider's
+  own controls.
 - **Categories to declare:**
   - Location: Approximate location.
   - Device or other IDs.
-  - App activity: App interactions.
+  - App activity: App interactions, Other actions (optional leaderboard scores).
   - App info and performance: Crash logs, Diagnostics.
 
 ---
